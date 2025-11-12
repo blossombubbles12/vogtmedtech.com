@@ -294,7 +294,9 @@ const AnimatedHero: React.FC = () => {
     state.discs.forEach((disc, i) => {
       if (i % 5 !== 0) return
 
-      if (disc.w < state.clip.disc.w - 5) {
+      const shouldClip = disc.w < state.clip.disc.w - 5 && state.clip.path
+      
+      if (shouldClip && state.clip.path) {
         ctx.save()
         ctx.clip(state.clip.path)
       }
@@ -304,7 +306,7 @@ const AnimatedHero: React.FC = () => {
       ctx.stroke()
       ctx.closePath()
 
-      if (disc.w < state.clip.disc.w - 5) {
+      if (shouldClip) {
         ctx.restore()
       }
     })
