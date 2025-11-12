@@ -37,28 +37,28 @@ const AnimatedHero: React.FC = () => {
   // Animation state
   const stateRef = useRef<{
     ctx: CanvasRenderingContext2D | null
-    rect: DOMRect
+    rect: { x: number; y: number; width: number; height: number; top: number; right: number; bottom: number; left: number }
     render: { width: number; height: number; dpi: number }
     discs: Disc[]
     lines: number[][][]
     particles: Particle[]
     startDisc: { x: number; y: number; w: number; h: number }
     endDisc: { x: number; y: number; w: number; h: number }
-    clip: { disc: Disc; i: number; path: Path2D }
-    linesCanvas: OffscreenCanvas
+    clip: { disc: Disc; i: number; path: Path2D | null }
+    linesCanvas: OffscreenCanvas | null
     linesCtx: OffscreenCanvasRenderingContext2D | null
     particleArea: { sw: number; ew: number; h: number; sx: number; ex: number }
   }>({
     ctx: null,
-    rect: new DOMRect(),
+    rect: { x: 0, y: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, left: 0 },
     render: { width: 0, height: 0, dpi: 1 },
     discs: [],
     lines: [],
     particles: [],
     startDisc: { x: 0, y: 0, w: 0, h: 0 },
     endDisc: { x: 0, y: 0, w: 0, h: 0 },
-    clip: { disc: { x: 0, y: 0, w: 0, h: 0, p: 0 }, i: 0, path: new Path2D() },
-    linesCanvas: new OffscreenCanvas(1, 1),
+    clip: { disc: { x: 0, y: 0, w: 0, h: 0, p: 0 }, i: 0, path: null },
+    linesCanvas: null,
     linesCtx: null,
     particleArea: { sw: 0, ew: 0, h: 0, sx: 0, ex: 0 },
   })
@@ -136,7 +136,7 @@ const AnimatedHero: React.FC = () => {
         state.clip = {
           disc: { ...disc },
           i,
-          path: new Path2D(),
+          path: typeof Path2D !== 'undefined' ? new Path2D() : null,
         }
       }
 
@@ -144,29 +144,31 @@ const AnimatedHero: React.FC = () => {
       state.discs.push(disc)
     }
 
-    state.clip.path = new Path2D()
-    state.clip.path.ellipse(
-      state.clip.disc.x,
-      state.clip.disc.y,
-      state.clip.disc.w,
-      state.clip.disc.h,
-      0,
-      0,
-      Math.PI * 2
-    )
-    state.clip.path.rect(
-      state.clip.disc.x - state.clip.disc.w,
-      0,
-      state.clip.disc.w * 2,
-      state.clip.disc.y
-    )
+    if (typeof Path2D !== 'undefined') {
+      state.clip.path = new Path2D()
+      state.clip.path.ellipse(
+        state.clip.disc.x,
+        state.clip.disc.y,
+        state.clip.disc.w,
+        state.clip.disc.h,
+        0,
+        0,
+        Math.PI * 2
+      )
+      state.clip.path.rect(
+        state.clip.disc.x - state.clip.disc.w,
+        0,
+        state.clip.disc.w * 2,
+        state.clip.disc.y
+      )
+    }
   }, [tweenDisc])
 
   const setLines = useCallback(() => {
     const state = stateRef.current
     const { width, height } = state.rect
 
-    if (width <= 0 || height <= 0) return
+    if (width <= 0 || height <= 0 || typeof OffscreenCanvas === 'undefined') return
 
     state.lines = []
 
@@ -191,7 +193,8 @@ const AnimatedHero: React.FC = () => {
     })
 
     state.linesCanvas = new OffscreenCanvas(Math.max(1, width), Math.max(1, height))
-    const ctx = state.linesCanvas.getContext('2d')!
+    const ctx = state.linesCanvas.getContext('2d')
+    if (!ctx || !state.clip.path) return
     state.linesCtx = ctx
 
     state.lines.forEach((line) => {
@@ -205,11 +208,12 @@ const AnimatedHero: React.FC = () => {
 
         if (
           !lineIsIn &&
+          state.clip.path &&
           (ctx.isPointInPath(state.clip.path, p1[0], p1[1]) ||
             ctx.isPointInStroke(state.clip.path, p1[0], p1[1]))
         ) {
           lineIsIn = true
-        } else if (lineIsIn) {
+        } else if (lineIsIn && state.clip.path) {
           ctx.clip(state.clip.path)
         }
 
@@ -317,7 +321,7 @@ const AnimatedHero: React.FC = () => {
   const drawParticles = useCallback(() => {
     const state = stateRef.current
     const { ctx } = state
-    if (!ctx) return
+    if (!ctx || !state.clip.path) return
 
     ctx.save()
     ctx.clip(state.clip.path)

@@ -25,6 +25,7 @@ import {
 } from '@chakra-ui/react'
 import { Br } from '@saas-ui/react'
 import type { NextPage } from 'next'
+import dynamic from 'next/dynamic'
 import {
   FiActivity,
   FiAward,
@@ -56,7 +57,13 @@ import { ButtonLink } from '#components/button-link/button-link'
 import { Faq } from '#components/faq'
 import { Features } from '#components/features'
 import { BackgroundGradient } from '#components/gradients/background-gradient'
-import { Hero, AnimatedHero } from '#components/hero'
+import { Hero } from '#components/hero'
+
+// Dynamic import with SSR disabled for canvas-based animation
+const AnimatedHero = dynamic(
+  () => import('#components/hero').then((mod) => ({ default: mod.AnimatedHero })),
+  { ssr: false }
+)
 import {
   Highlights,
   HighlightsItem,
