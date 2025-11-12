@@ -58,6 +58,7 @@ import { Faq } from '#components/faq'
 import { Features } from '#components/features'
 import { BackgroundGradient } from '#components/gradients/background-gradient'
 import { Hero } from '#components/hero'
+import { FeaturesShowcase } from '#components/features-showcase'
 
 // Dynamic import with SSR disabled for canvas-based animation
 const AnimatedHero = dynamic(
@@ -84,6 +85,7 @@ const Home: NextPage = () => {
       <HeroSection />
       <StatsSection />
       <BenefitsSection />
+      <FeaturesShowcaseSection />
       <StorySection1 />
       <StorySection2 />
       <StorySection3 />
@@ -213,28 +215,28 @@ const BenefitsSection = () => {
   ]
 
   return (
-    <Section py={20}>
+    <Section py={{ base: 16, md: 20 }}>
       <Container maxW="7xl">
         <FallInPlace delay={0.1}>
-          <VStack spacing={4} textAlign="center" mb={16}>
+          <VStack spacing={4} textAlign="center" mb={{ base: 12, md: 16 }}>
             <Badge colorScheme="accent" fontSize="sm" px={3} py={1} borderRadius="full">
               Why Choose VogtMedTech
             </Badge>
-            <Heading size="2xl" maxW="3xl">
+            <Heading size={{ base: 'xl', md: '2xl' }} maxW="3xl">
               Excellence in Every Innovation
             </Heading>
-            <Text fontSize="xl" color="gray.600" _dark={{ color: 'gray.400' }} maxW="2xl">
+            <Text fontSize={{ base: 'lg', md: 'xl' }} color="gray.600" _dark={{ color: 'gray.400' }} maxW="2xl">
               Combining cutting-edge technology with decades of medical expertise to deliver
               solutions that exceed the highest industry standards.
             </Text>
           </VStack>
         </FallInPlace>
 
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 6, md: 10 }}>
           {benefits.map((benefit, index) => (
             <FallInPlace key={index} delay={0.2 + index * 0.1}>
                 <Box
-                  p={10}
+                  p={{ base: 6, md: 10 }}
                   bg="white"
                   borderRadius="2xl"
                   border="1px"
@@ -251,20 +253,22 @@ const BenefitsSection = () => {
                     borderColor: `${benefit.color}.500`,
                   }}
                 >
-                  <HStack spacing={4} align="start">
+                  <HStack spacing={{ base: 3, md: 4 }} align="start" flexDirection={{ base: 'column', sm: 'row' }}>
                     <Box
-                      p={4}
+                      p={{ base: 3, md: 4 }}
                       bg={`${benefit.color}.50`}
                       borderRadius="xl"
                       _dark={{ bg: `${benefit.color}.900` }}
+                      alignSelf={{ base: 'center', sm: 'flex-start' }}
                     >
-                      <Icon as={benefit.icon} boxSize={8} color={`${benefit.color}.500`} />
+                      <Icon as={benefit.icon} boxSize={{ base: 6, md: 8 }} color={`${benefit.color}.500`} />
                     </Box>
-                    <VStack align="start" spacing={3} flex={1}>
-                      <Heading size="md">{benefit.title}</Heading>
+                    <VStack align={{ base: 'center', sm: 'start' }} spacing={3} flex={1} textAlign={{ base: 'center', sm: 'left' }}>
+                      <Heading size={{ base: 'sm', md: 'md' }}>{benefit.title}</Heading>
                       <Text
                         color="gray.600"
                         lineHeight="tall"
+                        fontSize={{ base: 'sm', md: 'md' }}
                         _dark={{ color: 'gray.400' }}
                       >
                         {benefit.description}
@@ -283,12 +287,12 @@ const BenefitsSection = () => {
 // Story Section 1: Precision Medicine (Image Right)
 const StorySection1 = () => {
   return (
-    <Section py={24}>
+    <Section py={{ base: 16, md: 24 }}>
       <Container maxW="7xl">
-        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={16} alignItems="center">
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 8, md: 16 }} alignItems="center">
           {/* Text Content - Left */}
           <FallInPlace delay={0.2}>
-            <VStack align="start" spacing={6}>
+            <VStack align={{ base: 'center', lg: 'start' }} spacing={6} textAlign={{ base: 'center', lg: 'left' }}>
               <Badge
                 colorScheme="brand"
                 fontSize="sm"
@@ -303,7 +307,7 @@ const StorySection1 = () => {
               
               <Heading
                 as="h2"
-                fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
+                fontSize={{ base: '2xl', sm: '3xl', md: '4xl', lg: '5xl' }}
                 lineHeight="shorter"
                 fontWeight="bold"
               >
@@ -314,14 +318,14 @@ const StorySection1 = () => {
                 </Text>
               </Heading>
 
-              <Text fontSize="lg" color="gray.600" _dark={{ color: 'gray.400' }} lineHeight="tall">
+              <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" _dark={{ color: 'gray.400' }} lineHeight="tall">
                 Our robotic-assisted surgical systems combine sub-millimeter precision with
                 AI-powered guidance, enabling surgeons to perform complex procedures with
                 unprecedented accuracy. Real-time imaging and haptic feedback create a seamless
                 extension of the surgeon's capabilities.
               </Text>
 
-              <VStack align="start" spacing={4} pt={4}>
+              <VStack align={{ base: 'center', lg: 'start' }} spacing={4} pt={4} w="full">
                 {[
                   {
                     icon: FiTarget,
@@ -339,21 +343,22 @@ const StorySection1 = () => {
                     description: 'Industry-leading complication prevention',
                   },
                 ].map((feature, index) => (
-                  <HStack key={index} spacing={4} align="start">
+                  <HStack key={index} spacing={{ base: 3, md: 4 }} align="start" w="full" justifyContent={{ base: 'center', lg: 'start' }}>
                     <Box
                       p={2}
                       bg="brand.50"
                       _dark={{ bg: 'brand.900' }}
                       borderRadius="lg"
                       mt={1}
+                      flexShrink={0}
                     >
                       <Icon as={feature.icon} boxSize={5} color="brand.500" />
                     </Box>
-                    <VStack align="start" spacing={0}>
-                      <Text fontWeight="600" fontSize="md">
+                    <VStack align={{ base: 'center', lg: 'start' }} spacing={0} textAlign={{ base: 'center', lg: 'left' }}>
+                      <Text fontWeight="600" fontSize={{ base: 'sm', md: 'md' }}>
                         {feature.title}
                       </Text>
-                      <Text fontSize="sm" color="gray.600" _dark={{ color: 'gray.400' }}>
+                      <Text fontSize={{ base: 'xs', md: 'sm' }} color="gray.600" _dark={{ color: 'gray.400' }}>
                         {feature.description}
                       </Text>
                     </VStack>
@@ -364,10 +369,11 @@ const StorySection1 = () => {
               <Button
                 as="a"
                 href="/solutions/ai-robotics"
-                size="lg"
+                size={{ base: 'md', md: 'lg' }}
                 colorScheme="brand"
                 rightIcon={<FiArrowRight />}
                 mt={4}
+                w={{ base: 'full', sm: 'auto' }}
               >
                 Explore Robotic Systems
               </Button>
@@ -381,12 +387,13 @@ const StorySection1 = () => {
               borderRadius="2xl"
               overflow="hidden"
               boxShadow="2xl"
+              order={{ base: -1, lg: 0 }}
               _hover={{
                 transform: 'scale(1.02)',
                 transition: 'transform 0.4s ease',
               }}
             >
-              <AspectRatio ratio={4 / 3}>
+              <AspectRatio ratio={{ base: 16 / 9, md: 4 / 3 }}>
                 <Box
                   bg="gray.200"
                   _dark={{ bg: 'gray.700' }}
@@ -870,30 +877,30 @@ const SolutionsShowcase = () => {
   ]
 
   return (
-    <Section py={20} bg="gray.50" _dark={{ bg: 'gray.900' }}>
+    <Section py={{ base: 16, md: 20 }} bg="gray.50" _dark={{ bg: 'gray.900' }}>
       <Container maxW="7xl">
         <FallInPlace delay={0.1}>
-          <VStack spacing={4} textAlign="center" mb={16}>
+          <VStack spacing={4} textAlign="center" mb={{ base: 12, md: 16 }}>
             <Badge colorScheme="purple" fontSize="sm" px={3} py={1} borderRadius="full">
               Our Solutions
             </Badge>
-            <Heading size="2xl" maxW="3xl">
+            <Heading size={{ base: 'xl', md: '2xl' }} maxW="3xl">
               Comprehensive Medical Technology Portfolio
             </Heading>
-            <Text fontSize="xl" color="gray.600" _dark={{ color: 'gray.400' }} maxW="2xl">
+            <Text fontSize={{ base: 'lg', md: 'xl' }} color="gray.600" _dark={{ color: 'gray.400' }} maxW="2xl">
               From advanced diagnostics to intelligent surgical systems, our integrated solutions
               cover the entire spectrum of modern healthcare delivery.
             </Text>
           </VStack>
         </FallInPlace>
 
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 6, md: 8 }}>
           {solutions.map((solution, index) => (
             <FallInPlace key={index} delay={0.2 + index * 0.1}>
               <Box
                 as="a"
                 href={solution.href}
-                p={8}
+                p={{ base: 6, md: 8 }}
                 bg={cardBg}
                 borderRadius="2xl"
                 border="1px"
@@ -1388,6 +1395,63 @@ const PricingSection = () => {
 
 const FaqSection = () => {
   return <Faq {...faq} />
+}
+
+// Interactive Features Showcase Section
+const FeaturesShowcaseSection = () => {
+  const features = [
+    {
+      id: 1,
+      icon: FaMicroscope,
+      title: 'Precision Diagnostics',
+      description:
+        'Advanced imaging and diagnostic tools powered by AI deliver unparalleled accuracy in detecting and analyzing medical conditions at the earliest stages.',
+      image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&h=600&fit=crop',
+    },
+    {
+      id: 2,
+      icon: FaRobot,
+      title: 'Robotic Surgery Systems',
+      description:
+        'State-of-the-art robotic surgical platforms provide surgeons with enhanced precision, flexibility, and control for minimally invasive procedures.',
+      image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&h=600&fit=crop',
+    },
+    {
+      id: 3,
+      icon: FaBrain,
+      title: 'AI-Powered Analytics',
+      description:
+        'Machine learning algorithms analyze vast medical datasets to provide actionable insights, predict outcomes, and personalize treatment plans.',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop',
+    },
+    {
+      id: 4,
+      icon: FiActivity,
+      title: 'Real-Time Monitoring',
+      description:
+        'Continuous patient monitoring systems with real-time alerts ensure immediate response to critical changes in patient conditions.',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop',
+    },
+    {
+      id: 5,
+      icon: FaChartLine,
+      title: 'Clinical Decision Support',
+      description:
+        'Evidence-based clinical decision support systems help healthcare providers make informed decisions with comprehensive data analysis.',
+      image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&h=600&fit=crop',
+    },
+  ]
+
+  return (
+    <Section py={24} bg="white" _dark={{ bg: 'gray.900' }}>
+      <FeaturesShowcase
+        features={features}
+        title="Technology That Transforms Care"
+        subtitle="Innovation in Action"
+        primaryColor="brand.500"
+      />
+    </Section>
+  )
 }
 
 export default Home

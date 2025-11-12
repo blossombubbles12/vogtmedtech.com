@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useRef, useEffect, useCallback } from 'react'
-import { Button, Box, Heading, Text, VStack, HStack, Badge } from '@chakra-ui/react'
+import { Button, Box, Heading, Text, VStack, HStack, Stack, Badge } from '@chakra-ui/react'
 import { FiArrowRight, FiActivity } from 'react-icons/fi'
 
 // Easing functions
@@ -420,7 +420,8 @@ const AnimatedHero: React.FC = () => {
       ref={containerRef}
       position="relative"
       w="full"
-      h="100vh"
+      h={{ base: '80vh', md: '90vh', lg: '100vh' }}
+      minH={{ base: '600px', md: '700px', lg: '800px' }}
       overflow="hidden"
       bg="gray.900"
       _dark={{ bg: 'gray.900' }}
@@ -507,8 +508,9 @@ const AnimatedHero: React.FC = () => {
         justifyContent="center"
         zIndex={20}
         pointerEvents="none"
+        px={{ base: 4, md: 8 }}
       >
-        <VStack spacing={8} textAlign="center" px={4} maxW="5xl">
+        <VStack spacing={{ base: 6, md: 8 }} textAlign="center" maxW={{ base: 'full', md: '5xl' }}>
           {/* Announcement Badge */}
           <Badge
             bg="whiteAlpha.100"
@@ -516,14 +518,14 @@ const AnimatedHero: React.FC = () => {
             border="1px solid"
             borderColor="whiteAlpha.200"
             color="white"
-            fontSize="sm"
+            fontSize={{ base: 'xs', md: 'sm' }}
             fontWeight="600"
-            px={5}
-            py={3}
+            px={{ base: 3, md: 5 }}
+            py={{ base: 2, md: 3 }}
             borderRadius="full"
             display="flex"
             alignItems="center"
-            gap={3}
+            gap={{ base: 2, md: 3 }}
             pointerEvents="auto"
             _hover={{
               bg: 'whiteAlpha.200',
@@ -545,8 +547,8 @@ const AnimatedHero: React.FC = () => {
           >
             <Box
               as="span"
-              w="8px"
-              h="8px"
+              w={{ base: '6px', md: '8px' }}
+              h={{ base: '6px', md: '8px' }}
               bg="#00f8f1"
               borderRadius="full"
               boxShadow="0 0 10px #00f8f1, 0 0 20px #00f8f1"
@@ -554,20 +556,23 @@ const AnimatedHero: React.FC = () => {
                 animation: 'glow-pulse 2s ease-in-out infinite alternate',
               }}
             />
-            <HStack as="span" spacing={2}>
-              <FiActivity />
-              <Text as="span">Transforming Healthcare with Innovation</Text>
+            <HStack as="span" spacing={{ base: 1, md: 2 }}>
+              <FiActivity size={14} />
+              <Text as="span" fontSize={{ base: 'xs', md: 'sm' }}>
+                Transforming Healthcare with Innovation
+              </Text>
             </HStack>
           </Badge>
 
           {/* Main Heading */}
           <Heading
             as="h1"
-            fontSize={{ base: '4xl', md: '6xl', lg: '7xl' }}
+            fontSize={{ base: '3xl', sm: '4xl', md: '6xl', lg: '7xl' }}
             fontWeight="bold"
             color="white"
             letterSpacing="tight"
             lineHeight="1.1"
+            px={{ base: 2, md: 0 }}
           >
             Advanced Medical
             <br />
@@ -576,24 +581,31 @@ const AnimatedHero: React.FC = () => {
 
           {/* Subtitle */}
           <Text
-            fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+            fontSize={{ base: 'md', sm: 'lg', md: 'xl', lg: '2xl' }}
             color="whiteAlpha.900"
-            maxW="3xl"
+            maxW={{ base: 'full', md: '3xl' }}
             lineHeight="tall"
+            px={{ base: 2, md: 0 }}
           >
             Pioneering next-generation medical devices, AI-powered diagnostics, and digital health
             solutions that empower healthcare professionals worldwide.
           </Text>
 
           {/* CTA Buttons */}
-          <HStack spacing={4} pointerEvents="auto" pt={4}>
+          <Stack 
+            direction={{ base: 'column', sm: 'row' }} 
+            spacing={4} 
+            pointerEvents="auto" 
+            pt={4}
+            w={{ base: 'full', sm: 'auto' }}
+          >
             <Button
-              size="lg"
+              size={{ base: 'lg', md: 'lg' }}
               colorScheme="brand"
               rightIcon={<FiArrowRight />}
-              fontSize="lg"
-              px={8}
-              py={7}
+              fontSize={{ base: 'md', md: 'lg' }}
+              px={{ base: 6, md: 8 }}
+              py={{ base: 6, md: 7 }}
               borderRadius="full"
               boxShadow="0 0 30px rgba(0, 123, 255, 0.5)"
               _hover={{
@@ -601,18 +613,19 @@ const AnimatedHero: React.FC = () => {
                 boxShadow: '0 0 40px rgba(0, 123, 255, 0.7)',
               }}
               transition="all 0.3s"
+              w={{ base: 'full', sm: 'auto' }}
             >
               Explore Solutions
             </Button>
             <Button
-              size="lg"
+              size={{ base: 'lg', md: 'lg' }}
               variant="outline"
               colorScheme="whiteAlpha"
               color="white"
               borderColor="whiteAlpha.300"
-              fontSize="lg"
-              px={8}
-              py={7}
+              fontSize={{ base: 'md', md: 'lg' }}
+              px={{ base: 6, md: 8 }}
+              py={{ base: 6, md: 7 }}
               borderRadius="full"
               _hover={{
                 bg: 'whiteAlpha.200',
@@ -620,10 +633,11 @@ const AnimatedHero: React.FC = () => {
                 transform: 'translateY(-4px)',
               }}
               transition="all 0.3s"
+              w={{ base: 'full', sm: 'auto' }}
             >
               Schedule Demo
             </Button>
-          </HStack>
+          </Stack>
         </VStack>
       </Box>
     </Box>
