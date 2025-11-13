@@ -59,6 +59,7 @@ import { Features } from '#components/features'
 import { BackgroundGradient } from '#components/gradients/background-gradient'
 import { Hero } from '#components/hero'
 import { FeaturesShowcase } from '#components/features-showcase'
+import { LatestBlogClient } from '#components/blog'
 
 // Dynamic import with SSR disabled for canvas-based animation
 const AnimatedHero = dynamic(
@@ -1885,6 +1886,37 @@ const FeaturesShowcaseSection = () => {
 }
 
 export default function Home() {
+  // Latest blog posts - update this when adding new posts
+  const latestPosts = [
+    {
+      slug: 'ai-transforming-medical-diagnostics',
+      title: 'How AI is Transforming Medical Diagnostics in 2025',
+      description: 'Explore the revolutionary impact of artificial intelligence on medical diagnostics, from radiology to pathology, and how it\'s improving patient outcomes.',
+      date: '2025-11-10',
+      author: 'Dr. Sarah Chen',
+      category: 'Artificial Intelligence',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop&q=90',
+    },
+    {
+      slug: 'future-of-robotic-surgery',
+      title: 'The Future of Robotic Surgery: Beyond the Operating Room',
+      description: 'Discover how next-generation surgical robots are expanding possibilities in minimally invasive procedures and changing the landscape of modern surgery.',
+      date: '2025-11-05',
+      author: 'Dr. Michael Rodriguez',
+      category: 'Robotics',
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=630&fit=crop&q=90',
+    },
+    {
+      slug: 'remote-patient-monitoring-revolution',
+      title: 'The Remote Patient Monitoring Revolution: Healthcare Beyond Hospital Walls',
+      description: 'How remote patient monitoring technology is transforming chronic disease management and reducing hospital readmissions while improving quality of life.',
+      date: '2025-10-28',
+      author: 'Emily Thompson, RN',
+      category: 'Digital Health',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=630&fit=crop&q=90',
+    },
+  ]
+
   return (
     <Box>
       <HeroSection />
@@ -1899,6 +1931,7 @@ export default function Home() {
       <InnovationSection />
       <TestimonialsSection />
       <TrustedBySection />
+      <LatestBlogClient posts={latestPosts} />
       <CTASection />
       <FaqSection />
     </Box>
