@@ -118,7 +118,7 @@ export default function DigitalHealthPage() {
       fullName: 'HealthConnect™ Care Coordination Platform',
       category: 'Healthcare Integration',
       tagline: 'One Platform. Complete Care Coordination.',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop&q=90',
       description: 'A comprehensive care coordination platform that unifies patient data, streamlines workflows, and enables seamless communication across the entire care continuum.',
       longDescription: 'HealthConnect eliminates data silos by integrating with 200+ EHR systems, medical devices, and health apps. Care teams gain a single, real-time view of each patient\'s health status, medications, appointments, and treatment plans—all in one intelligent platform.',
       features: [
@@ -141,7 +141,7 @@ export default function DigitalHealthPage() {
       fullName: 'VitalWatch™ Remote Patient Monitoring',
       category: 'Remote Patient Monitoring',
       tagline: 'Hospital-Quality Care, From Home',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop&q=90',
       description: 'Enterprise-grade remote patient monitoring platform that enables continuous surveillance of chronic conditions, post-discharge patients, and high-risk populations from the comfort of home.',
       longDescription: 'VitalWatch connects FDA-cleared wearable devices, home monitoring equipment, and patient-reported outcomes into a unified dashboard with intelligent alerting. Clinical teams receive real-time notifications for concerning trends, enabling early intervention before conditions worsen.',
       features: [
@@ -164,7 +164,7 @@ export default function DigitalHealthPage() {
       fullName: 'CarePath™ Patient Engagement Suite',
       category: 'Patient Experience',
       tagline: 'Empowering Patients, Simplifying Healthcare',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop&q=90',
       description: 'Consumer-grade mobile and web applications that give patients unprecedented control over their healthcare journey, from appointment scheduling to medication management and telehealth consultations.',
       longDescription: 'CarePath transforms the patient experience with an intuitive, all-in-one health management platform. Patients can schedule appointments, access medical records, communicate securely with providers, refill prescriptions, and complete pre-visit questionnaires—all from their smartphone. Gamification and behavioral nudges drive engagement and improve adherence.',
       features: [
@@ -238,7 +238,7 @@ export default function DigitalHealthPage() {
 
       {/* Stats Hero Section */}
       <Section py={{ base: 16, md: 20 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <SimpleGrid columns={{ base: 2, md: 4 }} spacing={{ base: 6, md: 10 }}>
             {stats.map((stat, index) => (
               <FallInPlace key={index} delay={0.1 * index}>
@@ -299,7 +299,7 @@ export default function DigitalHealthPage() {
 
       {/* Introduction Section */}
       <Section bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Grid templateColumns={{ base: '1fr', lg: '1fr 1fr' }} gap={{ base: 12, lg: 20 }} alignItems="center">
             <GridItem>
               <FallInPlace>
@@ -379,7 +379,7 @@ export default function DigitalHealthPage() {
                   boxShadow="2xl"
                 >
                   <Image
-                    src="/static/images/avatar.jpg"
+                    src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=800&h=600&fit=crop&q=90"
                     alt="Digital Health Platform"
                     w="100%"
                     h="auto"
@@ -405,7 +405,7 @@ export default function DigitalHealthPage() {
 
       {/* Key Features Section */}
       <Section py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={16} textAlign="center">
             <FallInPlace>
               <Heading
@@ -484,7 +484,7 @@ export default function DigitalHealthPage() {
 
       {/* Product Showcase Section */}
       <Section id="products" bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={20} textAlign="center">
             <FallInPlace>
               <Badge
@@ -687,7 +687,7 @@ export default function DigitalHealthPage() {
 
       {/* Benefits Section */}
       <Section py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={16} textAlign="center">
             <FallInPlace>
               <Heading
@@ -758,7 +758,7 @@ export default function DigitalHealthPage() {
 
       {/* Security & Compliance Section */}
       <Section bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Grid templateColumns={{ base: '1fr', lg: '1.2fr 1fr' }} gap={{ base: 12, lg: 16 }} alignItems="center">
             <GridItem>
               <FallInPlace>
@@ -858,7 +858,7 @@ export default function DigitalHealthPage() {
                   borderColor={cardBorder}
                 >
                   <Image
-                    src="/static/images/avatar.jpg"
+                    src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop&q=90"
                     alt="Security and Compliance"
                     w="100%"
                     h="auto"
@@ -938,7 +938,7 @@ export default function DigitalHealthPage() {
 
       {/* CTA Section */}
       <Section bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Box
             position="relative"
             bgGradient={useColorModeValue(

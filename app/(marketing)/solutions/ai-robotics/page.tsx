@@ -115,7 +115,7 @@ export default function AIRoboticsPage() {
       fullName: 'CognitionAI™ Clinical Intelligence Platform',
       category: 'AI-Powered Diagnostics',
       tagline: 'Artificial Intelligence. Human Insight.',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&q=90',
       description: 'A revolutionary AI platform that augments clinical decision-making across radiology, pathology, and diagnostics. CognitionAI analyzes medical images, lab results, and patient data to identify patterns invisible to the human eye.',
       longDescription: 'Trained on 10+ million annotated medical cases, CognitionAI\'s deep learning models achieve accuracy rates that match or exceed specialist physicians. The platform integrates seamlessly with existing PACS and LIS systems, providing real-time analysis and prioritizing urgent findings automatically.',
       features: [
@@ -138,7 +138,7 @@ export default function AIRoboticsPage() {
       fullName: 'PrecisionBot™ Surgical Robotic System',
       category: 'Robotic Surgery',
       tagline: 'Redefining Surgical Possibilities',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop&q=90',
       description: 'Next-generation surgical robot that combines 7 degrees of freedom, haptic feedback, and AI-guided navigation to enable complex procedures through millimeter-sized incisions.',
       longDescription: 'PrecisionBot represents a quantum leap in surgical robotics. The system features articulating instruments that mimic the human wrist with greater dexterity, active tremor cancellation, and motion scaling that translates large hand movements into micro-precise adjustments. Surgeons using PrecisionBot report 40% faster procedure times and 60% reduction in complications.',
       features: [
@@ -161,7 +161,7 @@ export default function AIRoboticsPage() {
       fullName: 'AutonomyAI™ Autonomous Surgical Assistant',
       category: 'Autonomous Robotics',
       tagline: 'The Future of Collaborative Surgery',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=800&h=600&fit=crop&q=90',
       description: 'Semi-autonomous surgical robot that handles routine procedural steps under surgeon supervision, allowing physicians to focus on complex decision-making and critical maneuvers.',
       longDescription: 'AutonomyAI uses computer vision and reinforcement learning to perform standardized surgical tasks like suturing, retraction, and cavity exposure with human-level skill. The system operates under constant surgeon supervision with instant override capability, maintaining human control while reducing surgeon fatigue and operative time.',
       features: [
@@ -262,7 +262,7 @@ export default function AIRoboticsPage() {
 
       {/* Stats Hero Section */}
       <Section py={{ base: 16, md: 20 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <SimpleGrid columns={{ base: 2, md: 4 }} spacing={{ base: 6, md: 10 }}>
             {stats.map((stat, index) => (
               <FallInPlace key={index} delay={0.1 * index}>
@@ -323,7 +323,7 @@ export default function AIRoboticsPage() {
 
       {/* Introduction Section */}
       <Section bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Grid templateColumns={{ base: '1fr', lg: '1fr 1fr' }} gap={{ base: 12, lg: 20 }} alignItems="center">
             <GridItem>
               <FallInPlace>
@@ -403,7 +403,7 @@ export default function AIRoboticsPage() {
                   boxShadow="2xl"
                 >
                   <Image
-                    src="/static/images/avatar.jpg"
+                    src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop&q=90"
                     alt="AI and Robotics"
                     w="100%"
                     h="auto"
@@ -429,7 +429,7 @@ export default function AIRoboticsPage() {
 
       {/* Key Features Section */}
       <Section py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={16} textAlign="center">
             <FallInPlace>
               <Heading
@@ -508,7 +508,7 @@ export default function AIRoboticsPage() {
 
       {/* Product Showcase Section */}
       <Section id="products" bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={20} textAlign="center">
             <FallInPlace>
               <Badge
@@ -711,7 +711,7 @@ export default function AIRoboticsPage() {
 
       {/* Clinical Applications Section */}
       <Section py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={16} textAlign="center">
             <FallInPlace>
               <Heading
@@ -787,7 +787,7 @@ export default function AIRoboticsPage() {
 
       {/* Benefits Section */}
       <Section bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={16} textAlign="center">
             <FallInPlace>
               <Heading
@@ -858,7 +858,7 @@ export default function AIRoboticsPage() {
 
       {/* Quality & Compliance Section */}
       <Section py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Grid templateColumns={{ base: '1fr', lg: '1.2fr 1fr' }} gap={{ base: 12, lg: 16 }} alignItems="center">
             <GridItem>
               <FallInPlace>
@@ -958,7 +958,7 @@ export default function AIRoboticsPage() {
                   borderColor={cardBorder}
                 >
                   <Image
-                    src="/static/images/avatar.jpg"
+                    src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=800&h=600&fit=crop&q=90"
                     alt="Testing and Certification"
                     w="100%"
                     h="auto"
@@ -1038,7 +1038,7 @@ export default function AIRoboticsPage() {
 
       {/* CTA Section */}
       <Section py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Box
             position="relative"
             bgGradient={useColorModeValue(

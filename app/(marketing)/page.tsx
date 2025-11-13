@@ -99,7 +99,7 @@ const StatsSection = () => {
 
   return (
     <Section py={20} bg="gray.50" _dark={{ bg: 'gray.900' }}>
-      <Container maxW="7xl">
+      <Container maxW="container.2xl">
         <FallInPlace delay={0.1}>
           <VStack spacing={4} textAlign="center" mb={16}>
             <Badge colorScheme="brand" fontSize="sm" px={3} py={1} borderRadius="full">
@@ -195,7 +195,7 @@ const BenefitsSection = () => {
 
   return (
     <Section py={{ base: 16, md: 20 }}>
-      <Container maxW="7xl">
+      <Container maxW="container.2xl">
         <FallInPlace delay={0.1}>
           <VStack spacing={4} textAlign="center" mb={{ base: 12, md: 16 }}>
             <Badge colorScheme="accent" fontSize="sm" px={3} py={1} borderRadius="full">
@@ -268,7 +268,7 @@ const BenefitsSection = () => {
 const StorySection1 = () => {
   return (
     <Section py={{ base: 16, md: 24 }}>
-      <Container maxW="7xl">
+      <Container maxW="container.2xl">
         <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 8, md: 16 }} alignItems="center">
           {/* Text Content - Left */}
           <FallInPlace delay={0.2}>
@@ -487,7 +487,7 @@ const StorySection1 = () => {
 const StorySection2 = () => {
   return (
     <Section py={24} bg="gray.50" _dark={{ bg: 'gray.900' }}>
-      <Container maxW="7xl">
+      <Container maxW="container.2xl">
         <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={16} alignItems="center">
           {/* Image - Left */}
           <FallInPlace delay={0.2}>
@@ -742,7 +742,7 @@ const StorySection2 = () => {
 const StorySection3 = () => {
   return (
     <Section py={24}>
-      <Container maxW="7xl">
+      <Container maxW="container.2xl">
         <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={16} alignItems="center">
           {/* Text Content - Left */}
           <FallInPlace delay={0.2}>
@@ -1087,7 +1087,7 @@ const SolutionsShowcase = () => {
 
   return (
     <Section py={{ base: 16, md: 20 }} bg="gray.50" _dark={{ bg: 'gray.900' }}>
-      <Container maxW="7xl">
+      <Container maxW="container.2xl">
         <FallInPlace delay={0.1}>
           <VStack spacing={4} textAlign="center" mb={{ base: 12, md: 16 }}>
             <Badge colorScheme="purple" fontSize="sm" px={3} py={1} borderRadius="full">
@@ -1203,7 +1203,7 @@ const ImpactSection = () => {
 
   return (
     <Section py={20}>
-      <Container maxW="7xl">
+      <Container maxW="container.2xl">
         <FallInPlace delay={0.1}>
           <VStack spacing={4} textAlign="center" mb={16}>
             <Badge colorScheme="pink" fontSize="sm" px={3} py={1} borderRadius="full">
@@ -1273,7 +1273,7 @@ const InnovationSection = () => {
 
   return (
     <Section py={20} bg="gray.50" _dark={{ bg: 'gray.900' }}>
-      <Container maxW="7xl">
+      <Container maxW="container.2xl">
         <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={12} alignItems="center">
           <FallInPlace delay={0.1}>
             <VStack align="start" spacing={6}>
@@ -1397,7 +1397,7 @@ const TrustedBySection = () => {
 
   return (
     <Section py={16}>
-      <Container maxW="7xl">
+      <Container maxW="container.2xl">
         <FallInPlace delay={0.1}>
           <VStack spacing={8}>
             <Text
@@ -1444,7 +1444,7 @@ const TrustedBySection = () => {
 const CTASection = () => {
   return (
     <Section py={20}>
-      <Container maxW="7xl">
+      <Container maxW="container.2xl">
         <FallInPlace delay={0.1}>
           <Box
             p={{ base: 12, md: 16 }}

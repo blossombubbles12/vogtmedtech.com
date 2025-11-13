@@ -118,7 +118,7 @@ export default function MedicalDevicesPage() {
       fullName: 'Sentinel-X™ Patient Monitor',
       category: 'Critical Care Monitoring',
       tagline: 'Intelligence Meets Vigilance',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=800&h=600&fit=crop&q=90',
       description: 'The future of critical care monitoring. Sentinel-X combines AI-powered predictive analytics with continuous multi-parameter monitoring to give clinicians the insights they need before emergencies occur.',
       longDescription: 'Designed for high-acuity environments, Sentinel-X represents a paradigm shift in patient monitoring. Our proprietary AI engine analyzes over 100 clinical parameters in real-time, identifying subtle patterns that may indicate patient deterioration hours before traditional alarms would trigger.',
       features: [
@@ -141,7 +141,7 @@ export default function MedicalDevicesPage() {
       fullName: 'CardioPulse™ Ablation System',
       category: 'Cardiac Electrophysiology',
       tagline: 'Precision That Saves Hearts',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=800&h=600&fit=crop&q=90',
       description: 'Revolutionary catheter ablation technology that combines high-density 3D mapping with contact force sensing to treat cardiac arrhythmias with unparalleled precision and safety.',
       longDescription: 'CardioPulse transforms cardiac ablation procedures with real-time 3D electroanatomical mapping and advanced catheter navigation. Surgeons gain unprecedented visibility and control, reducing procedure times while improving first-pass success rates.',
       features: [
@@ -164,7 +164,7 @@ export default function MedicalDevicesPage() {
       fullName: 'NeuroGuide™ Surgical Robot',
       category: 'Robotic-Assisted Surgery',
       tagline: 'The Future of Neurosurgery',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1581594549595-35f6edc7b762?w=800&h=600&fit=crop&q=90',
       description: 'A breakthrough robotic system for minimally invasive neurosurgery. NeuroGuide augments surgeon capabilities with sub-millimeter precision, 3D visualization, and intelligent tremor compensation.',
       longDescription: 'NeuroGuide represents the pinnacle of surgical robotics for neurosurgery. With seven degrees of freedom, haptic feedback, and AI-powered surgical planning, it enables procedures previously thought impossible through minimally invasive approaches.',
       features: [
@@ -211,7 +211,7 @@ export default function MedicalDevicesPage() {
 
       {/* Stats Hero Section */}
       <Section py={{ base: 16, md: 20 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <SimpleGrid columns={{ base: 2, md: 4 }} spacing={{ base: 6, md: 10 }}>
             {stats.map((stat, index) => (
               <FallInPlace key={index} delay={0.1 * index}>
@@ -272,7 +272,7 @@ export default function MedicalDevicesPage() {
 
       {/* Introduction Section */}
       <Section bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Grid templateColumns={{ base: '1fr', lg: '1fr 1fr' }} gap={{ base: 12, lg: 20 }} alignItems="center">
             <GridItem>
               <FallInPlace>
@@ -350,8 +350,8 @@ export default function MedicalDevicesPage() {
                   boxShadow="2xl"
                 >
                   <Image
-                    src="/static/images/avatar.jpg"
-                    alt="Medical Device Innovation"
+                    src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop&q=90"
+                    alt="Medical professionals collaborating with advanced medical technology"
                     w="100%"
                     h="auto"
                   />
@@ -376,7 +376,7 @@ export default function MedicalDevicesPage() {
 
       {/* Key Features Section */}
       <Section py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={16} textAlign="center">
             <FallInPlace>
               <Heading
@@ -455,7 +455,7 @@ export default function MedicalDevicesPage() {
 
       {/* Product Showcase Section */}
       <Section id="products" bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={20} textAlign="center">
             <FallInPlace>
               <Badge
@@ -658,7 +658,7 @@ export default function MedicalDevicesPage() {
 
       {/* Quality & Compliance Section */}
       <Section py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Grid templateColumns={{ base: '1fr', lg: '1.2fr 1fr' }} gap={{ base: 12, lg: 16 }} alignItems="center">
             <GridItem>
               <FallInPlace>
@@ -758,8 +758,8 @@ export default function MedicalDevicesPage() {
                   borderColor={cardBorder}
                 >
                   <Image
-                    src="/static/images/avatar.jpg"
-                    alt="Quality Control"
+                    src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&h=600&fit=crop&q=90"
+                    alt="Quality control and precision manufacturing of medical devices"
                     w="100%"
                     h="auto"
                   />
@@ -838,7 +838,7 @@ export default function MedicalDevicesPage() {
 
       {/* CTA Section */}
       <Section py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Box
             position="relative"
             bgGradient={useColorModeValue(

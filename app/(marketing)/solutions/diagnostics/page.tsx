@@ -114,7 +114,7 @@ export default function DiagnosticsPage() {
       fullName: 'Spectrum™ Clinical Analyzer',
       category: 'Multi-Parameter Analysis',
       tagline: 'Comprehensive Diagnostics, Singular Platform',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=800&h=600&fit=crop&q=90',
       description: 'The most advanced multi-parameter clinical analyzer on the market. Spectrum combines chemistry, immunoassay, and hematology testing in one compact, fully automated system.',
       longDescription: 'Designed for high-volume laboratories and hospitals, Spectrum delivers lab-quality results with unmatched throughput. Our proprietary microfluidic technology and AI-powered quality control ensure consistent accuracy across 200+ different assays.',
       features: [
@@ -137,7 +137,7 @@ export default function DiagnosticsPage() {
       fullName: 'DxVision™ AI Imaging System',
       category: 'Medical Imaging Diagnostics',
       tagline: 'See Beyond the Scan',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&h=600&fit=crop&q=90',
       description: 'Revolutionary AI-powered medical imaging platform that transforms radiology workflows. DxVision analyzes CT, MRI, and X-ray images in real-time, detecting abnormalities with superhuman accuracy.',
       longDescription: 'Trained on over 10 million annotated medical images, DxVision\'s deep learning models identify early-stage cancers, fractures, hemorrhages, and hundreds of other pathologies. Radiologists using DxVision report 40% faster read times and 25% improvement in detection rates.',
       features: [
@@ -160,7 +160,7 @@ export default function DiagnosticsPage() {
       fullName: 'GenomicsPro™ Sequencing Platform',
       category: 'Molecular Diagnostics',
       tagline: 'Precision Medicine at Scale',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=600&fit=crop&q=90',
       description: 'Next-generation sequencing platform bringing genomic medicine to routine clinical practice. GenomicsPro delivers comprehensive genetic testing with clinical-grade accuracy and unmatched speed.',
       longDescription: 'From oncology to rare disease diagnosis, GenomicsPro enables clinicians to make treatment decisions based on individual genetic profiles. Our automated bioinformatics pipeline transforms raw sequencing data into actionable clinical insights within 24 hours.',
       features: [
@@ -230,7 +230,7 @@ export default function DiagnosticsPage() {
 
       {/* Stats Hero Section */}
       <Section py={{ base: 16, md: 20 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <SimpleGrid columns={{ base: 2, md: 4 }} spacing={{ base: 6, md: 10 }}>
             {stats.map((stat, index) => (
               <FallInPlace key={index} delay={0.1 * index}>
@@ -291,7 +291,7 @@ export default function DiagnosticsPage() {
 
       {/* Introduction Section */}
       <Section bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Grid templateColumns={{ base: '1fr', lg: '1fr 1fr' }} gap={{ base: 12, lg: 20 }} alignItems="center">
             <GridItem>
               <FallInPlace>
@@ -371,7 +371,7 @@ export default function DiagnosticsPage() {
                   boxShadow="2xl"
                 >
                   <Image
-                    src="/static/images/avatar.jpg"
+                    src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&h=600&fit=crop&q=90"
                     alt="Diagnostic Systems"
                     w="100%"
                     h="auto"
@@ -397,7 +397,7 @@ export default function DiagnosticsPage() {
 
       {/* Key Features Section */}
       <Section py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={16} textAlign="center">
             <FallInPlace>
               <Heading
@@ -476,7 +476,7 @@ export default function DiagnosticsPage() {
 
       {/* Product Showcase Section */}
       <Section id="products" bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={20} textAlign="center">
             <FallInPlace>
               <Badge
@@ -679,7 +679,7 @@ export default function DiagnosticsPage() {
 
       {/* Benefits Section */}
       <Section py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={16} textAlign="center">
             <FallInPlace>
               <Heading
@@ -746,7 +746,7 @@ export default function DiagnosticsPage() {
 
       {/* Quality & Compliance Section */}
       <Section bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Grid templateColumns={{ base: '1fr', lg: '1.2fr 1fr' }} gap={{ base: 12, lg: 16 }} alignItems="center">
             <GridItem>
               <FallInPlace>
@@ -844,7 +844,7 @@ export default function DiagnosticsPage() {
                   borderColor={cardBorder}
                 >
                   <Image
-                    src="/static/images/avatar.jpg"
+                    src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=800&h=600&fit=crop&q=90"
                     alt="Laboratory Quality"
                     w="100%"
                     h="auto"
@@ -924,7 +924,7 @@ export default function DiagnosticsPage() {
 
       {/* CTA Section */}
       <Section bg={featureBg} py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Box
             position="relative"
             bgGradient={useColorModeValue(

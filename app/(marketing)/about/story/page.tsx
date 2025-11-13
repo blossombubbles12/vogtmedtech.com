@@ -141,7 +141,7 @@ export default function OurStoryPage() {
 
       {/* Intro Section */}
       <Section py={20}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Grid templateColumns={{ base: '1fr', lg: '1fr 1fr' }} gap={16} alignItems="center">
             <GridItem>
               <FallInPlace>
@@ -212,7 +212,7 @@ export default function OurStoryPage() {
 
       {/* Timeline Section */}
       <Section bg={featureBg} py={20}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={16} textAlign="center">
             <Heading
               as="h2"
@@ -352,7 +352,7 @@ export default function OurStoryPage() {
 
       {/* Vision & Mission Section */}
       <Section py={20}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
             <Box
               bg={cardBg}
@@ -403,7 +403,7 @@ export default function OurStoryPage() {
 
       {/* Core Values Section */}
       <Section bg={featureBg} py={20}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={16} textAlign="center">
             <Heading
               as="h2"
@@ -464,7 +464,7 @@ export default function OurStoryPage() {
 
       {/* Team Section */}
       <Section py={20}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <VStack spacing={4} mb={16} textAlign="center">
             <Heading
               as="h2"
@@ -536,7 +536,7 @@ export default function OurStoryPage() {
 
       {/* CTA Section */}
       <Section py={20} bg={featureBg}>
-        <Container maxW="container.xl">
+        <Container maxW="container.2xl">
           <Box
             bgGradient={useColorModeValue(
               'linear(to-r, brand.600, accent.500)',
