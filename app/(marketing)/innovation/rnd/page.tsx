@@ -349,7 +349,7 @@ export default function RnDPage() {
                   boxShadow="2xl"
                 >
                   <Image
-                    src="/static/images/avatar.jpg"
+                    src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200&h=800&fit=crop&q=80"
                     alt="Research & Development"
                     w="100%"
                     h="auto"

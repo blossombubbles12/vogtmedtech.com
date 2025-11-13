@@ -434,7 +434,7 @@ export default function PatentsPage() {
                   boxShadow="2xl"
                 >
                   <Image
-                    src="/static/images/avatar.jpg"
+                    src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=800&fit=crop&q=80"
                     alt="Patents and Publications"
                     w="100%"
                     h="auto"

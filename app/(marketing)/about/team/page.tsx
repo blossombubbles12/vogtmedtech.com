@@ -45,7 +45,7 @@ export default function TeamPage() {
     {
       name: 'Dr. Michael Vogt',
       title: 'Chief Executive Officer & Founder',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&q=80',
       bio: 'Visionary leader with 25+ years pioneering medical device innovation. Founded Vogt MedTech with a mission to democratize access to cutting-edge healthcare technology worldwide.',
       education: 'Ph.D. Biomedical Engineering, MIT | MBA, Stanford GSB',
       specialization: 'Medical Devices, Healthcare Innovation, Strategic Leadership',
@@ -63,7 +63,7 @@ export default function TeamPage() {
     {
       name: 'Dr. Sarah Chen',
       title: 'Chief Technology Officer',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&q=80',
       bio: 'AI and robotics pioneer transforming surgical precision. Leading our R&D division with breakthrough innovations in machine learning-powered diagnostics and autonomous surgical systems.',
       education: 'Ph.D. Artificial Intelligence, Carnegie Mellon | B.S. Robotics, UC Berkeley',
       specialization: 'AI/ML, Surgical Robotics, Computer Vision',
@@ -81,7 +81,7 @@ export default function TeamPage() {
     {
       name: 'Dr. James Mitchell',
       title: 'Chief Medical Officer',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&q=80',
       bio: 'Board-certified surgeon and clinical innovator ensuring every product meets the highest standards of safety and efficacy. Bridge between cutting-edge technology and real-world patient care.',
       education: 'M.D., Johns Hopkins School of Medicine | Residency, Mayo Clinic',
       specialization: 'Minimally Invasive Surgery, Clinical Trials, Patient Safety',
@@ -98,7 +98,7 @@ export default function TeamPage() {
     {
       name: 'Emily Rodriguez',
       title: 'VP of Research & Development',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=80',
       bio: 'Leading a global team of 200+ engineers and researchers driving breakthrough innovations. Expert in translating scientific discoveries into market-ready medical solutions.',
       education: 'Ph.D. Mechanical Engineering, Stanford | B.S. Bioengineering, Georgia Tech',
       specialization: 'Product Development, Materials Science, Regulatory Strategy',
@@ -116,7 +116,7 @@ export default function TeamPage() {
     {
       name: 'David Park',
       title: 'Chief Financial Officer',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&q=80',
       bio: 'Strategic financial leader with deep expertise in healthcare economics and high-growth medical technology companies. Driving sustainable growth while maintaining our mission-first approach.',
       education: 'MBA, Harvard Business School | B.A. Economics, Yale University',
       specialization: 'Healthcare Finance, M&A Strategy, Investor Relations',
@@ -133,7 +133,7 @@ export default function TeamPage() {
     {
       name: 'Dr. Aisha Patel',
       title: 'Chief Compliance & Regulatory Officer',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop&q=80',
       bio: 'Regulatory expert ensuring global compliance across 45 countries. Champion of ethical innovation and patient safety, navigating complex international medical device regulations.',
       education: 'J.D., Columbia Law School | Ph.D. Regulatory Science, USC',
       specialization: 'FDA/EMA Regulations, Quality Systems, Ethics & Compliance',
@@ -155,24 +155,28 @@ export default function TeamPage() {
       title: 'Scientific Advisor',
       affiliation: 'MIT Media Lab',
       expertise: 'Biomedical Engineering',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80',
     },
     {
       name: 'Dr. Lisa Thompson',
       title: 'Clinical Advisor',
       affiliation: 'Cleveland Clinic',
       expertise: 'Cardiothoracic Surgery',
+      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=400&fit=crop&q=80',
     },
     {
       name: 'Dr. Ahmed Hassan',
       title: 'Strategic Advisor',
       affiliation: 'WHO Health Systems',
       expertise: 'Global Health Policy',
+      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&q=80',
     },
     {
       name: 'Jennifer Wu',
       title: 'Innovation Advisor',
       affiliation: 'Y Combinator',
       expertise: 'Healthcare Startups',
+      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&q=80',
     },
   ]
 
@@ -524,7 +528,7 @@ export default function TeamPage() {
                     mb={4}
                   >
                     <Image
-                      src="/static/images/avatar.jpg"
+                      src={advisor.image}
                       alt={advisor.name}
                       borderRadius="full"
                       boxSize={16}

@@ -94,7 +94,7 @@ export default function CaseStudiesPage() {
       },
       timeline: '6 months',
       procedures: '1,200+ procedures',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&h=600&fit=crop&q=80',
       color: 'brand.500',
     },
     {
@@ -118,7 +118,7 @@ export default function CaseStudiesPage() {
       },
       timeline: '4 months',
       procedures: '50,000+ studies analyzed',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&h=600&fit=crop&q=80',
       color: 'purple.500',
     },
     {
@@ -142,7 +142,7 @@ export default function CaseStudiesPage() {
       },
       timeline: '8 months',
       procedures: '800+ robotic procedures',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?w=800&h=600&fit=crop&q=80',
       color: 'accent.500',
     },
     {
@@ -166,7 +166,7 @@ export default function CaseStudiesPage() {
       },
       timeline: '10 months',
       procedures: '24/7 monitoring of 120 beds',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop&q=80',
       color: 'pink.500',
     },
     {
@@ -190,7 +190,7 @@ export default function CaseStudiesPage() {
       },
       timeline: '12 months rollout',
       procedures: '75,000+ tests performed',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?w=800&h=600&fit=crop&q=80',
       color: 'brand.500',
     },
     {
@@ -214,7 +214,7 @@ export default function CaseStudiesPage() {
       },
       timeline: '18 months',
       procedures: '500 patients monitored',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop&q=80',
       color: 'accent.500',
     },
   ]
