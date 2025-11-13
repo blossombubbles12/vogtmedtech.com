@@ -163,16 +163,6 @@ export const menuItems: MenuItem[] = [
     ],
   },
   {
-    label: 'Pricing',
-    href: '/pricing',
-    icon: FiDollarSign,
-  },
-  {
-    label: 'Testimonials',
-    href: '/testimonials',
-    icon: FiStar,
-  },
-  {
     label: 'FAQ',
     href: '/resources/faq',
     icon: FiHelpCircle,
