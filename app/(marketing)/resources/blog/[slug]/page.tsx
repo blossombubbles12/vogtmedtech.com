@@ -5,6 +5,7 @@ import { Container, Box, Heading, Text, Image, HStack, Tag, VStack, Divider, use
 import { format } from 'date-fns'
 import { getPostBySlug } from '#data/blog-posts'
 import { Section } from '#components/section'
+import { BlogContent } from '#components/blog/blog-content'
 
 interface BlogPostPageProps {
   params: {
@@ -87,12 +88,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
             <Divider />
 
-            {/* Article Body - Content from MDX files */}
+            {/* Article Body - Full Content */}
             <Box>
-              <Text fontSize="lg" color={mutedColor} lineHeight="tall">
-                Read the full article content in our blog. This is a preview of the comprehensive
-                medical technology insights we share covering AI, robotics, digital health, and more.
-              </Text>
+              <BlogContent slug={post.slug} />
             </Box>
 
             <Divider />
