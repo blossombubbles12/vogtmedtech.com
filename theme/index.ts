@@ -43,10 +43,14 @@ export const theme = extendTheme(
           color: 'gray.900',
           bg: 'white',
           fontSize: 'lg',
+          transition: 'background-color 0.3s ease-in-out, color 0.3s ease-in-out',
           _dark: {
             color: 'white',
             bg: 'gray.900',
           },
+        },
+        '*': {
+          transition: 'background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out',
         },
       }),
     },
