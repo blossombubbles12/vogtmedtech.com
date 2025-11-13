@@ -24,13 +24,6 @@ const LogoIcon = () => (
         <stop offset="50%" stopColor="#00C2A8" />
         <stop offset="100%" stopColor="#9D4EDD" />
       </linearGradient>
-      <filter id="glow">
-        <feGaussianBlur stdDeviation="2" result="coloredBlur" />
-        <feMerge>
-          <feMergeNode in="coloredBlur" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
     </defs>
 
     {/* Outer hexagon */}
@@ -39,7 +32,6 @@ const LogoIcon = () => (
       stroke="url(#logoGradient)"
       strokeWidth="2"
       fill="none"
-      filter="url(#glow)"
     />
 
     {/* Inner geometric pattern - DNA helix inspired */}
@@ -121,18 +113,6 @@ export const Logo = ({ href = '/', onClick }: LogoProps) => {
         }}
         transition="all 0.2s"
       >
-        <Box
-          sx={{
-            '@keyframes pulse': {
-              '0%, 100%': { opacity: 1 },
-              '50%': { opacity: 0.8 },
-            },
-            animation: 'pulse 3s ease-in-out infinite',
-          }}
-        >
-          <LogoIcon />
-        </Box>
-        
         <Flex direction="column" lineHeight="1">
           <Text
             fontSize="xl"
