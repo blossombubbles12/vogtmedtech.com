@@ -1,6 +1,9 @@
 import { ColorModeScript, theme } from '@chakra-ui/react'
-
+import { Metadata } from 'next'
 import { Provider } from './provider'
+import { generatePageMetadata } from '@/lib/seo'
+
+export const metadata: Metadata = generatePageMetadata({ pageKey: 'home' })
 
 export default function Layout(props: { children: React.ReactNode }) {
   const colorMode = theme.config.initialColorMode
