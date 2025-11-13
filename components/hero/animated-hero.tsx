@@ -600,6 +600,8 @@ const AnimatedHero: React.FC = () => {
             w={{ base: 'full', sm: 'auto' }}
           >
             <Button
+              as="a"
+              href="/solutions"
               size={{ base: 'lg', md: 'lg' }}
               colorScheme="brand"
               rightIcon={<FiArrowRight />}
