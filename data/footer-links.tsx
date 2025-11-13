@@ -38,6 +38,7 @@ export const footerSections: FooterSection[] = [
   {
     title: 'Solutions',
     links: [
+      { label: 'All Solutions', href: '/solutions' },
       { label: 'Medical Devices', href: '/solutions/medical-devices' },
       { label: 'Diagnostic Systems', href: '/solutions/diagnostics' },
       { label: 'Digital Health', href: '/solutions/digital-health' },
@@ -56,9 +57,10 @@ export const footerSections: FooterSection[] = [
   {
     title: 'Connect',
     links: [
+      { label: 'Schedule Demo', href: '/schedule-demo' },
+      { label: 'Contact Sales', href: '/contact' },
       { label: 'support@vogtmedtech.com', href: 'mailto:support@vogtmedtech.com', isExternal: true },
       { label: '+1 (555) 123-4567', href: 'tel:+15551234567', isExternal: true },
-      { label: 'Boston, MA, USA', href: '/contact', isExternal: false },
     ],
   },
 ]

@@ -183,7 +183,7 @@ export const authMenuItems: MenuItem[] = [
   },
   {
     label: 'Get Demo',
-    href: '/contact',
+    href: '/schedule-demo',
     icon: FiZap,
     variant: 'primary',
   },

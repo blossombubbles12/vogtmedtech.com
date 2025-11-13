@@ -641,6 +641,8 @@ const AnimatedHero: React.FC = () => {
               }}
               transition="all 0.3s"
               w={{ base: 'full', sm: 'auto' }}
+              as="a"
+              href="/schedule-demo"
             >
               Schedule Demo
             </Button>

@@ -1506,7 +1506,7 @@ const CTASection = () => {
               <HStack spacing={4} pt={4} flexWrap="wrap" justify="center">
                 <Button
                   as="a"
-                  href="/contact"
+                  href="/schedule-demo"
                   size="lg"
                   bg="white"
                   color="brand.600"
