@@ -1411,28 +1411,24 @@ const TrustedBySection = () => {
               Trusted by Leading Healthcare Institutions
             </Text>
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={8} w="full">
-              {logos.map((logo, index) => (
-                <Box
-                  key={index}
-                  p={6}
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  opacity={0.6}
-                  _hover={{ opacity: 1 }}
-                  transition="opacity 0.3s"
-                >
-                  <Text
-                    fontSize="sm"
-                    fontWeight="600"
-                    color="gray.600"
-                    _dark={{ color: 'gray.400' }}
-                    textAlign="center"
-                  >
-                    {logo}
-                  </Text>
-                </Box>
-              ))}
+              <Box p={6} display="flex" alignItems="center" justifyContent="center" opacity={0.8} _hover={{ opacity: 1 }} transition="opacity 0.3s">
+                <Text fontSize="md" fontWeight="bold" color="gray.700" _dark={{ color: 'gray.300' }} textAlign="center">Johns Hopkins Hospital</Text>
+              </Box>
+              <Box p={6} display="flex" alignItems="center" justifyContent="center" opacity={0.8} _hover={{ opacity: 1 }} transition="opacity 0.3s">
+                <Text fontSize="md" fontWeight="bold" color="gray.700" _dark={{ color: 'gray.300' }} textAlign="center">Mayo Clinic</Text>
+              </Box>
+              <Box p={6} display="flex" alignItems="center" justifyContent="center" opacity={0.8} _hover={{ opacity: 1 }} transition="opacity 0.3s">
+                <Text fontSize="md" fontWeight="bold" color="gray.700" _dark={{ color: 'gray.300' }} textAlign="center">Cleveland Clinic</Text>
+              </Box>
+              <Box p={6} display="flex" alignItems="center" justifyContent="center" opacity={0.8} _hover={{ opacity: 1 }} transition="opacity 0.3s">
+                <Text fontSize="md" fontWeight="bold" color="gray.700" _dark={{ color: 'gray.300' }} textAlign="center">Massachusetts General</Text>
+              </Box>
+              <Box p={6} display="flex" alignItems="center" justifyContent="center" opacity={0.8} _hover={{ opacity: 1 }} transition="opacity 0.3s">
+                <Text fontSize="md" fontWeight="bold" color="gray.700" _dark={{ color: 'gray.300' }} textAlign="center">Stanford Health</Text>
+              </Box>
+              <Box p={6} display="flex" alignItems="center" justifyContent="center" opacity={0.8} _hover={{ opacity: 1 }} transition="opacity 0.3s">
+                <Text fontSize="md" fontWeight="bold" color="gray.700" _dark={{ color: 'gray.300' }} textAlign="center">UCSF Medical Center</Text>
+              </Box>
             </SimpleGrid>
           </VStack>
         </FallInPlace>
