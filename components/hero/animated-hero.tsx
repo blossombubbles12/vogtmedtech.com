@@ -619,18 +619,25 @@ const AnimatedHero: React.FC = () => {
             </Button>
             <Button
               size={{ base: 'lg', md: 'lg' }}
-              variant="outline"
-              colorScheme="whiteAlpha"
-              color="white"
-              borderColor="whiteAlpha.300"
+              bg="yellow.400"
+              color="gray.900"
               fontSize={{ base: 'md', md: 'lg' }}
               px={{ base: 6, md: 8 }}
               py={{ base: 6, md: 7 }}
               borderRadius="full"
+              fontWeight="700"
+              boxShadow="0 0 30px rgba(250, 204, 21, 0.6)"
               _hover={{
-                bg: 'whiteAlpha.200',
-                borderColor: 'white',
+                bg: 'yellow.300',
                 transform: 'translateY(-4px)',
+                boxShadow: '0 0 40px rgba(250, 204, 21, 0.8)',
+              }}
+              _dark={{
+                bg: 'yellow.400',
+                color: 'gray.900',
+                _hover: {
+                  bg: 'yellow.300',
+                },
               }}
               transition="all 0.3s"
               w={{ base: 'full', sm: 'auto' }}

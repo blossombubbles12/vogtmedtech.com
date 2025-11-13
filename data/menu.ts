@@ -176,15 +176,15 @@ export const menuItems: MenuItem[] = [
 
 export const authMenuItems: MenuItem[] = [
   {
-    label: 'Log In',
-    href: '/login',
-    icon: FiLogIn,
+    label: 'Contact Sales',
+    href: '/contact',
+    icon: FiMail,
     variant: 'ghost',
   },
   {
-    label: 'Sign Up',
-    href: '/signup',
-    icon: FiUserPlus,
+    label: 'Get Demo',
+    href: '/contact',
+    icon: FiZap,
     variant: 'primary',
   },
 ]
