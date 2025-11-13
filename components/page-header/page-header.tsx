@@ -51,7 +51,7 @@ export interface PageHeaderProps {
 export const PageHeader: React.FC<PageHeaderProps> = ({
   title,
   subtitle,
-  image,
+  image = 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=1920&h=600&fit=crop&q=90',
   gradient = true,
   gradientColors = ['brand.600', 'accent.400'],
   height = ['300px', '350px', '400px'],
@@ -115,6 +115,13 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           zIndex="0"
+          _after={{
+            content: '""',
+            position: 'absolute',
+            inset: 0,
+            bg: 'blackAlpha.300',
+            zIndex: 1,
+          }}
         />
       )}
 
@@ -127,8 +134,9 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
           right="0"
           bottom="0"
           bgGradient={image ? overlayBg : fallbackBg}
-          opacity={image ? 0.9 : 1}
+          opacity={image ? 0.85 : 1}
           zIndex="1"
+          mixBlendMode="multiply"
         />
       )}
 

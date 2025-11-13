@@ -10,6 +10,7 @@ import {
   Text,
   VStack,
   SimpleGrid,
+  Grid,
   Icon,
   HStack,
   Badge,
@@ -24,7 +25,6 @@ import {
   StatHelpText,
 } from '@chakra-ui/react'
 import { Br } from '@saas-ui/react'
-import type { NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import {
   FiActivity,
@@ -78,27 +78,6 @@ import { Section } from '#components/section'
 import faq from '#data/faq'
 import pricing from '#data/pricing'
 import testimonials from '#data/testimonials'
-
-const Home: NextPage = () => {
-  return (
-    <Box>
-      <HeroSection />
-      <StatsSection />
-      <BenefitsSection />
-      <FeaturesShowcaseSection />
-      <StorySection1 />
-      <StorySection2 />
-      <StorySection3 />
-      <SolutionsShowcase />
-      <ImpactSection />
-      <InnovationSection />
-      <TestimonialsSection />
-      <TrustedBySection />
-      <CTASection />
-      <FaqSection />
-    </Box>
-  )
-}
 
 const HeroSection: React.FC = () => {
   return (
@@ -248,6 +227,7 @@ const BenefitsSection = () => {
                     borderColor: 'gray.700',
                   }}
                   _hover={{
+          
                     transform: 'translateY(-4px)',
                     shadow: '2xl',
                     borderColor: `${benefit.color}.500`,
@@ -395,27 +375,74 @@ const StorySection1 = () => {
             >
               <AspectRatio ratio={{ base: 16 / 9, md: 4 / 3 }}>
                 <Box
-                  bg="gray.200"
-                  _dark={{ bg: 'gray.700' }}
                   position="relative"
                   overflow="hidden"
+                  backgroundImage="url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=900&fit=crop&q=80')"
+                  backgroundSize="cover"
+                  backgroundPosition="center"
                 >
-                  {/* Placeholder gradient overlay */}
+                  {/* Premium overlay for content legibility */}
                   <Box
                     position="absolute"
                     inset={0}
-                    bgGradient="linear(135deg, brand.500, accent.500)"
-                    opacity={0.9}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
+                    bgGradient="linear(135deg, blackAlpha.400, blackAlpha.600)"
+                    backdropFilter="blur(1px)"
+                  />
+
+                  {/* Key stats overlay */}
+                  <VStack
+                    position="absolute"
+                    bottom={6}
+                    left={6}
+                    spacing={2}
+                    align="start"
                   >
-                    <VStack spacing={4}>
-                      <Icon as={FaRobot} boxSize={20} color="white" opacity={0.9} />
-                      <Text color="white" fontSize="2xl" fontWeight="bold">
-                        Surgical Robotics
-                      </Text>
-                    </VStack>
+                    <HStack spacing={6}>
+                      <Box
+                        bg="whiteAlpha.200"
+                        backdropFilter="blur(10px)"
+                        px={4}
+                        py={2}
+                        borderRadius="lg"
+                        border="1px solid"
+                        borderColor="whiteAlpha.300"
+                      >
+                        <Text color="white" fontSize="sm" fontWeight="600">
+                          99.8% Success Rate
+                        </Text>
+                      </Box>
+                      <Box
+                        bg="whiteAlpha.200"
+                        backdropFilter="blur(10px)"
+                        px={4}
+                        py={2}
+                        borderRadius="lg"
+                        border="1px solid"
+                        borderColor="whiteAlpha.300"
+                      >
+                        <Text color="white" fontSize="sm" fontWeight="600">
+                          0.1mm Precision
+                        </Text>
+                      </Box>
+                    </HStack>
+                  </VStack>
+
+                  {/* Corner tech indicator */}
+                  <Box
+                    position="absolute"
+                    top={4}
+                    left={4}
+                    bg="accent.500"
+                    color="white"
+                    px={3}
+                    py={1}
+                    borderRadius="md"
+                    fontSize="xs"
+                    fontWeight="600"
+                    textTransform="uppercase"
+                    letterSpacing="wider"
+                  >
+                    AI-Powered
                   </Box>
                   
                   {/* Premium border effect */}
@@ -423,14 +450,14 @@ const StorySection1 = () => {
                     position="absolute"
                     inset={0}
                     border="1px solid"
-                    borderColor="whiteAlpha.300"
+                    borderColor="whiteAlpha.200"
                     borderRadius="2xl"
                     pointerEvents="none"
                   />
                 </Box>
               </AspectRatio>
 
-              {/* Floating badge */}
+              {/* Enhanced floating badge */}
               <Badge
                 position="absolute"
                 top={6}
@@ -443,8 +470,10 @@ const StorySection1 = () => {
                 borderRadius="full"
                 fontSize="xs"
                 fontWeight="600"
+                border="1px solid"
+                borderColor="whiteAlpha.300"
               >
-                8,000+ Procedures Performed
+                500+ Hospitals Worldwide
               </Badge>
             </Box>
           </FallInPlace>
@@ -474,29 +503,101 @@ const StorySection2 = () => {
             >
               <AspectRatio ratio={4 / 3}>
                 <Box
-                  bg="gray.200"
-                  _dark={{ bg: 'gray.700' }}
                   position="relative"
                   overflow="hidden"
+                  backgroundImage="url('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&h=900&fit=crop&q=80')"
+                  backgroundSize="cover"
+                  backgroundPosition="center"
                 >
-                  {/* Placeholder gradient overlay */}
+                  {/* Premium overlay for AI theme */}
                   <Box
                     position="absolute"
                     inset={0}
-                    bgGradient="linear(135deg, purple.500, pink.500)"
-                    opacity={0.9}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
+                    bgGradient="linear(135deg, purple.600 0%, purple.800 50%, blackAlpha.700 100%)"
+                    opacity={0.85}
+                    mixBlendMode="multiply"
+                  />
+
+                  {/* AI neural network visualization overlay */}
+                  <Box
+                    position="absolute"
+                    inset={0}
+                    opacity={0.2}
                   >
-                    <VStack spacing={4}>
-                      <Icon as={FaBrain} boxSize={20} color="white" opacity={0.9} />
-                      <Text color="white" fontSize="2xl" fontWeight="bold">
-                        AI Diagnostics
-                      </Text>
-                    </VStack>
+                    <svg width="100%" height="100%" viewBox="0 0 400 300">
+                      <defs>
+                        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="1"/>
+                        </pattern>
+                      </defs>
+                      <rect width="100%" height="100%" fill="url(#grid)" />
+                      {/* Neural network nodes */}
+                      <circle cx="100" cy="75" r="3" fill="rgba(255,255,255,0.6)" />
+                      <circle cx="200" cy="50" r="3" fill="rgba(255,255,255,0.6)" />
+                      <circle cx="300" cy="100" r="3" fill="rgba(255,255,255,0.6)" />
+                      <circle cx="150" cy="150" r="3" fill="rgba(255,255,255,0.6)" />
+                      <circle cx="250" cy="200" r="3" fill="rgba(255,255,255,0.6)" />
+                      {/* Connections */}
+                      <line x1="100" y1="75" x2="200" y2="50" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
+                      <line x1="200" y1="50" x2="300" y2="100" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
+                      <line x1="150" y1="150" x2="250" y2="200" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
+                    </svg>
                   </Box>
-                  
+
+                  {/* AI processing indicator */}
+                  <Box
+                    position="absolute"
+                    top={4}
+                    left={4}
+                    bg="purple.500"
+                    color="white"
+                    px={3}
+                    py={1}
+                    borderRadius="md"
+                    fontSize="xs"
+                    fontWeight="600"
+                    textTransform="uppercase"
+                    letterSpacing="wider"
+                  >
+                    Deep Learning
+                  </Box>
+
+                  {/* Real-time stats overlay */}
+                  <VStack
+                    position="absolute"
+                    top={6}
+                    right={6}
+                    spacing={2}
+                    align="end"
+                  >
+                    <Box
+                      bg="whiteAlpha.200"
+                      backdropFilter="blur(10px)"
+                      px={3}
+                      py={1}
+                      borderRadius="md"
+                      border="1px solid"
+                      borderColor="whiteAlpha.300"
+                    >
+                      <Text color="white" fontSize="xs" fontWeight="600">
+                        Processing: 2.3ms
+                      </Text>
+                    </Box>
+                    <Box
+                      bg="whiteAlpha.200"
+                      backdropFilter="blur(10px)"
+                      px={3}
+                      py={1}
+                      borderRadius="md"
+                      border="1px solid"
+                      borderColor="whiteAlpha.300"
+                    >
+                      <Text color="white" fontSize="xs" fontWeight="600">
+                        Confidence: 97.8%
+                      </Text>
+                    </Box>
+                  </VStack>
+
                   {/* Animated scan lines */}
                   <Box
                     position="absolute"
@@ -516,14 +617,14 @@ const StorySection2 = () => {
                     position="absolute"
                     inset={0}
                     border="1px solid"
-                    borderColor="whiteAlpha.300"
+                    borderColor="whiteAlpha.200"
                     borderRadius="2xl"
                     pointerEvents="none"
                   />
                 </Box>
               </AspectRatio>
 
-              {/* Floating badge */}
+              {/* Enhanced floating badge */}
               <Badge
                 position="absolute"
                 bottom={6}
@@ -536,8 +637,10 @@ const StorySection2 = () => {
                 borderRadius="full"
                 fontSize="xs"
                 fontWeight="600"
+                border="1px solid"
+                borderColor="whiteAlpha.300"
               >
-                97.2% Diagnostic Accuracy
+                1M+ Scans Analyzed Daily
               </Badge>
             </Box>
           </FallInPlace>
@@ -743,59 +846,163 @@ const StorySection3 = () => {
             >
               <AspectRatio ratio={4 / 3}>
                 <Box
-                  bg="gray.200"
-                  _dark={{ bg: 'gray.700' }}
                   position="relative"
                   overflow="hidden"
+                  backgroundImage="url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1200&h=900&fit=crop&q=80')"
+                  backgroundSize="cover"
+                  backgroundPosition="center"
                 >
-                  {/* Placeholder gradient overlay */}
+                  {/* Connected care overlay theme */}
                   <Box
                     position="absolute"
                     inset={0}
-                    bgGradient="linear(135deg, accent.500, brand.500)"
-                    opacity={0.9}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
+                    bgGradient="linear(135deg, accent.600 0%, accent.800 30%, blackAlpha.600 100%)"
+                    opacity={0.8}
+                    mixBlendMode="multiply"
+                  />
+
+                  {/* Digital network visualization */}
+                  <Box
+                    position="absolute"
+                    inset={0}
+                    opacity={0.3}
                   >
-                    <VStack spacing={4}>
-                      <Icon as={FiActivity} boxSize={20} color="white" opacity={0.9} />
-                      <Text color="white" fontSize="2xl" fontWeight="bold">
-                        Connected Care
-                      </Text>
-                    </VStack>
+                    <svg width="100%" height="100%" viewBox="0 0 400 300">
+                      {/* Network nodes representing connected devices */}
+                      <circle cx="80" cy="60" r="4" fill="rgba(255,255,255,0.8)" />
+                      <circle cx="160" cy="40" r="4" fill="rgba(255,255,255,0.8)" />
+                      <circle cx="240" cy="80" r="4" fill="rgba(255,255,255,0.8)" />
+                      <circle cx="320" cy="60" r="4" fill="rgba(255,255,255,0.8)" />
+                      <circle cx="120" cy="140" r="4" fill="rgba(255,255,255,0.8)" />
+                      <circle cx="200" cy="180" r="6" fill="rgba(0,194,168,0.9)" />
+                      <circle cx="280" cy="160" r="4" fill="rgba(255,255,255,0.8)" />
+                      <circle cx="100" cy="220" r="4" fill="rgba(255,255,255,0.8)" />
+                      <circle cx="300" cy="240" r="4" fill="rgba(255,255,255,0.8)" />
+                      
+                      {/* Connection lines */}
+                      <line x1="200" y1="180" x2="160" y2="40" stroke="rgba(0,194,168,0.5)" strokeWidth="2" />
+                      <line x1="200" y1="180" x2="240" y2="80" stroke="rgba(0,194,168,0.5)" strokeWidth="2" />
+                      <line x1="200" y1="180" x2="120" y2="140" stroke="rgba(0,194,168,0.5)" strokeWidth="2" />
+                      <line x1="200" y1="180" x2="280" y2="160" stroke="rgba(0,194,168,0.5)" strokeWidth="2" />
+                      <line x1="80" y1="60" x2="160" y2="40" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
+                      <line x1="240" y1="80" x2="320" y2="60" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
+                    </svg>
                   </Box>
-                  
-                  {/* Pulse animation */}
+
+                  {/* Live status indicators */}
+                  <VStack
+                    position="absolute"
+                    top={4}
+                    left={4}
+                    spacing={2}
+                    align="start"
+                  >
+                    <Box
+                      bg="accent.500"
+                      color="white"
+                      px={3}
+                      py={1}
+                      borderRadius="md"
+                      fontSize="xs"
+                      fontWeight="600"
+                      textTransform="uppercase"
+                      letterSpacing="wider"
+                    >
+                      Live Monitoring
+                    </Box>
+                    <HStack spacing={2}>
+                      <Box
+                        w={2}
+                        h={2}
+                        borderRadius="full"
+                        bg="green.400"
+                        sx={{
+                          '@keyframes blink': {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: 0.3 },
+                          },
+                          animation: 'blink 2s ease-in-out infinite',
+                        }}
+                      />
+                      <Text color="white" fontSize="xs" fontWeight="500">
+                        2,847 Patients Online
+                      </Text>
+                    </HStack>
+                  </VStack>
+
+                  {/* Health metrics overlay */}
+                  <VStack
+                    position="absolute"
+                    bottom={6}
+                    right={6}
+                    spacing={2}
+                    align="end"
+                  >
+                    <Box
+                      bg="whiteAlpha.200"
+                      backdropFilter="blur(10px)"
+                      px={3}
+                      py={2}
+                      borderRadius="lg"
+                      border="1px solid"
+                      borderColor="whiteAlpha.300"
+                    >
+                      <VStack spacing={1} align="center">
+                        <Text color="white" fontSize="xs" fontWeight="600">
+                          Readmissions
+                        </Text>
+                        <Text color="green.300" fontSize="lg" fontWeight="700">
+                          ↓58%
+                        </Text>
+                      </VStack>
+                    </Box>
+                    <Box
+                      bg="whiteAlpha.200"
+                      backdropFilter="blur(10px)"
+                      px={3}
+                      py={1}
+                      borderRadius="md"
+                      border="1px solid"
+                      borderColor="whiteAlpha.300"
+                    >
+                      <Text color="white" fontSize="xs" fontWeight="600">
+                        Response Time: 1.2s
+                      </Text>
+                    </Box>
+                  </VStack>
+
+                  {/* Pulse animation for heart rate */}
                   <Box
                     position="absolute"
-                    inset={0}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
+                    top="50%"
+                    left="50%"
+                    transform="translate(-50%, -50%)"
                   >
                     {[0, 1, 2].map((i) => (
                       <Box
                         key={i}
                         position="absolute"
-                        w="200px"
-                        h="200px"
+                        w="120px"
+                        h="120px"
                         borderRadius="full"
                         border="2px solid"
-                        borderColor="whiteAlpha.400"
+                        borderColor="whiteAlpha.300"
+                        top="50%"
+                        left="50%"
+                        transform="translate(-50%, -50%)"
                         sx={{
                           '@keyframes pulse': {
                             '0%': {
-                              transform: 'scale(0.8)',
+                              transform: 'translate(-50%, -50%) scale(0.8)',
                               opacity: 0.8,
                             },
                             '100%': {
-                              transform: 'scale(1.5)',
+                              transform: 'translate(-50%, -50%) scale(1.8)',
                               opacity: 0,
                             },
                           },
-                          animation: `pulse 2s ease-out infinite`,
-                          animationDelay: `${i * 0.6}s`,
+                          animation: `pulse 3s ease-out infinite`,
+                          animationDelay: `${i * 1}s`,
                         }}
                       />
                     ))}
@@ -806,14 +1013,14 @@ const StorySection3 = () => {
                     position="absolute"
                     inset={0}
                     border="1px solid"
-                    borderColor="whiteAlpha.300"
+                    borderColor="whiteAlpha.200"
                     borderRadius="2xl"
                     pointerEvents="none"
                   />
                 </Box>
               </AspectRatio>
 
-              {/* Floating badge */}
+              {/* Enhanced floating badge */}
               <Badge
                 position="absolute"
                 top={6}
@@ -826,8 +1033,10 @@ const StorySection3 = () => {
                 borderRadius="full"
                 fontSize="xs"
                 fontWeight="600"
+                border="1px solid"
+                borderColor="whiteAlpha.300"
               >
-                500K+ Active Patients
+                2.8M+ Remote Consultations
               </Badge>
             </Box>
           </FallInPlace>
@@ -1402,56 +1611,296 @@ const FeaturesShowcaseSection = () => {
   const features = [
     {
       id: 1,
-      icon: FaMicroscope,
-      title: 'Precision Diagnostics',
+      icon: FaRobot,
+      title: 'Innovation in Action',
       description:
-        'Advanced imaging and diagnostic tools powered by AI deliver unparalleled accuracy in detecting and analyzing medical conditions at the earliest stages.',
-      image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&h=600&fit=crop',
+        'Witness surgical precision redefined through AI-powered robotics that combine machine learning with human expertise, delivering unprecedented accuracy in complex medical procedures.',
+      image: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1600&h=1000&fit=crop&q=90',
+      stats: { value: '99.8%', label: 'Precision Rate' },
     },
     {
       id: 2,
-      icon: FaRobot,
-      title: 'Robotic Surgery Systems',
+      icon: FaBrain,
+      title: 'Technology That Transforms Care',
       description:
-        'State-of-the-art robotic surgical platforms provide surgeons with enhanced precision, flexibility, and control for minimally invasive procedures.',
-      image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&h=600&fit=crop',
+        'Experience the future of diagnostics with our AI-powered imaging systems that detect conditions 10x faster than traditional methods, revolutionizing patient outcomes worldwide.',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&h=1000&fit=crop&q=90',
+      stats: { value: '10x', label: 'Faster Diagnosis' },
     },
     {
       id: 3,
-      icon: FaBrain,
-      title: 'AI-Powered Analytics',
-      description:
-        'Machine learning algorithms analyze vast medical datasets to provide actionable insights, predict outcomes, and personalize treatment plans.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop',
-    },
-    {
-      id: 4,
-      icon: FiActivity,
-      title: 'Real-Time Monitoring',
-      description:
-        'Continuous patient monitoring systems with real-time alerts ensure immediate response to critical changes in patient conditions.',
-      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop',
-    },
-    {
-      id: 5,
       icon: FaChartLine,
-      title: 'Clinical Decision Support',
+      title: 'Data-Driven Patient Outcomes',
       description:
-        'Evidence-based clinical decision support systems help healthcare providers make informed decisions with comprehensive data analysis.',
-      image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&h=600&fit=crop',
+        'Harness the power of predictive analytics and real-time monitoring to anticipate patient needs, optimize treatments, and reduce hospital readmissions by 58%.',
+      image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1600&h=1000&fit=crop&q=90',
+      stats: { value: '58%', label: 'Reduced Readmissions' },
     },
   ]
 
   return (
-    <Section py={24} bg="white" _dark={{ bg: 'gray.900' }}>
-      <FeaturesShowcase
-        features={features}
-        title="Technology That Transforms Care"
-        subtitle="Innovation in Action"
-        primaryColor="brand.500"
-      />
-    </Section>
+    <Box py={{ base: 20, md: 32, lg: 40 }} bg="white" _dark={{ bg: 'gray.900' }}>
+      {/* Header Section with Container */}
+      <Container maxW="8xl" mb={{ base: 16, md: 20, lg: 28 }}>
+        <FallInPlace delay={0.1}>
+          <VStack spacing={{ base: 4, md: 6 }} textAlign="center" px={{ base: 4, md: 8 }}>
+            <Badge 
+              colorScheme="blue" 
+              fontSize={{ base: 'xs', md: 'sm' }}
+              px={{ base: 4, md: 6 }} 
+              py={{ base: 2, md: 3 }}
+              borderRadius="full"
+              textTransform="uppercase"
+              letterSpacing="wider"
+              fontWeight="700"
+            >
+              Featured Innovation
+            </Badge>
+            <Heading
+              as="h2"
+              fontSize={{ base: '4xl', md: '5xl', lg: '7xl' }}
+              fontWeight="800"
+              lineHeight="1.1"
+              maxW="5xl"
+              bgGradient="linear(to-r, gray.900, gray.600)"
+              bgClip="text"
+              _dark={{
+                bgGradient: "linear(to-r, white, gray.300)",
+              }}
+            >
+              Pioneering the Future of Medicine
+            </Heading>
+            <Text 
+              fontSize={{ base: 'xl', md: '2xl' }} 
+              color="gray.600" 
+              _dark={{ color: 'gray.400' }} 
+              maxW="3xl"
+              lineHeight="1.6"
+              fontWeight="400"
+            >
+              Three revolutionary technologies reshaping healthcare delivery and patient outcomes across the globe
+            </Text>
+          </VStack>
+        </FallInPlace>
+      </Container>
+
+      {/* Full Width Features */}
+      <VStack spacing={{ base: 12, md: 16, lg: 20 }} w="full">
+        {features.map((feature, index) => (
+          <FallInPlace key={feature.id} delay={0.2 + index * 0.15}>
+            <Box
+              w="full"
+              borderRadius={0}
+                overflow="hidden"
+                bg="white"
+                _dark={{ 
+                  bg: 'gray.800',
+                  boxShadow: '0 25px 60px -15px rgba(0, 0, 0, 0.5)',
+                  borderColor: 'gray.700'
+                }}
+                boxShadow="0 20px 50px -15px rgba(0, 0, 0, 0.12)"
+                border="1px"
+                borderColor="gray.100"
+                transition="all 0.5s cubic-bezier(0.4, 0, 0.2, 1)"
+                _hover={{
+                  transform: 'translateY(-12px)',
+                  boxShadow: '0 35px 80px -15px rgba(0, 123, 255, 0.25)',
+                  _dark: { boxShadow: '0 35px 80px -15px rgba(0, 123, 255, 0.4)' },
+                }}
+              >
+                <Grid
+                  templateColumns={{ 
+                    base: '1fr', 
+                    lg: index % 2 === 0 ? '1.4fr 1fr' : '1fr 1.4fr' 
+                  }}
+                  minH={{ base: 'auto', lg: '500px', xl: '550px' }}
+                  gap={0}
+                >
+                  {/* Image Section - Larger and More Dominant */}
+                  <Box
+                    position="relative"
+                    overflow="hidden"
+                    order={{ base: 1, lg: index % 2 === 0 ? 1 : 2 }}
+                    minH={{ base: '300px', md: '380px', lg: '500px', xl: '550px' }}
+                  >
+                    <Image
+                      src={feature.image}
+                      alt={feature.title}
+                      w="full"
+                      h="full"
+                      objectFit="cover"
+                      transition="transform 1s cubic-bezier(0.4, 0, 0.2, 1)"
+                      _hover={{ transform: 'scale(1.08)' }}
+                    />
+                    
+                    {/* Sophisticated Gradient Overlay */}
+                    <Box
+                      position="absolute"
+                      inset="0"
+                      bgGradient={
+                        index % 2 === 0 
+                          ? "linear(to-r, transparent 0%, rgba(0,123,255,0.08) 70%, rgba(0,123,255,0.15) 100%)"
+                          : "linear(to-l, transparent 0%, rgba(0,123,255,0.08) 70%, rgba(0,123,255,0.15) 100%)"
+                      }
+                      _dark={{
+                        bgGradient: index % 2 === 0 
+                          ? "linear(to-r, transparent 0%, rgba(0,123,255,0.15) 70%, rgba(0,123,255,0.25) 100%)"
+                          : "linear(to-l, transparent 0%, rgba(0,123,255,0.15) 70%, rgba(0,123,255,0.25) 100%)"
+                      }}
+                    />
+                    
+                    {/* Floating Stats Badge - Enhanced */}
+                    <Box
+                      position="absolute"
+                      top={{ base: 6, md: 10 }}
+                      right={{ base: 6, md: 10 }}
+                      bg="whiteAlpha.950"
+                      _dark={{ bg: 'rgba(0, 0, 0, 0.85)' }}
+                      backdropFilter="blur(30px)"
+                      borderRadius="3xl"
+                      p={{ base: 5, md: 8 }}
+                      border="1px"
+                      borderColor="whiteAlpha.300"
+                      boxShadow="0 15px 40px rgba(0, 0, 0, 0.15)"
+                      transition="all 0.4s ease"
+                      _hover={{
+                        transform: 'scale(1.05)',
+                        boxShadow: '0 20px 50px rgba(0, 123, 255, 0.3)',
+                      }}
+                    >
+                      <VStack spacing={2}>
+                        <Text
+                          fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
+                          fontWeight="900"
+                          bgGradient="linear(to-br, brand.500, brand.600)"
+                          bgClip="text"
+                          lineHeight="1"
+                        >
+                          {feature.stats.value}
+                        </Text>
+                        <Text
+                          fontSize={{ base: 'xs', md: 'sm' }}
+                          color="gray.700"
+                          _dark={{ color: 'gray.300' }}
+                          fontWeight="700"
+                          textAlign="center"
+                          textTransform="uppercase"
+                          letterSpacing="wide"
+                        >
+                          {feature.stats.label}
+                        </Text>
+                      </VStack>
+                    </Box>
+                  </Box>
+
+                  {/* Content Section - Clean & Modern */}
+                  <Flex
+                    direction="column"
+                    justify="center"
+                    p={{ base: 8, md: 12, lg: 16, xl: 20 }}
+                    order={{ base: 2, lg: index % 2 === 0 ? 2 : 1 }}
+                    bg="white"
+                    _dark={{ bg: 'gray.800' }}
+                  >
+                    <VStack 
+                      spacing={{ base: 6, md: 8 }}
+                      align={{ base: 'center', lg: index % 2 === 0 ? 'flex-start' : 'flex-end' }}
+                      textAlign={{ base: 'center', lg: index % 2 === 0 ? 'left' : 'right' }}
+                      maxW="xl"
+                      mx={{ base: 'auto', lg: index % 2 === 0 ? '0' : 'auto' }}
+                    >
+                      {/* Icon - Elegant Circle */}
+                      <Box
+                        p={{ base: 5, md: 6 }}
+                        bg="brand.50"
+                        _dark={{ bg: 'rgba(0, 123, 255, 0.1)', borderColor: 'brand.700' }}
+                        borderRadius="3xl"
+                        border="1px"
+                        borderColor="brand.100"
+                        transition="all 0.3s ease"
+                        _hover={{
+                          transform: 'rotate(5deg) scale(1.05)',
+                          bg: 'brand.100',
+                          _dark: { bg: 'rgba(0, 123, 255, 0.2)' }
+                        }}
+                      >
+                        <Icon 
+                          as={feature.icon} 
+                          boxSize={{ base: 10, md: 12 }}
+                          color="brand.500" 
+                        />
+                      </Box>
+
+                      {/* Title - Bold & Impactful */}
+                      <Heading
+                        as="h3"
+                        fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
+                        fontWeight="800"
+                        lineHeight="1.2"
+                        color="gray.900"
+                        _dark={{ color: 'white' }}
+                      >
+                        {feature.title}
+                      </Heading>
+
+                      {/* Description - Clear & Readable */}
+                      <Text
+                        fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+                        color="gray.600"
+                        _dark={{ color: 'gray.400' }}
+                        lineHeight="1.7"
+                        fontWeight="400"
+                      >
+                        {feature.description}
+                      </Text>
+
+                      {/* CTA Button - Subtle & Modern */}
+                      <Button
+                        size="lg"
+                        colorScheme="brand"
+                        variant="ghost"
+                        rightIcon={<FiArrowRight />}
+                        fontSize={{ base: 'md', md: 'lg' }}
+                        fontWeight="700"
+                        px={0}
+                        mt={4}
+                        _hover={{
+                          bg: 'transparent',
+                          color: 'brand.600',
+                          transform: index % 2 === 0 ? 'translateX(12px)' : 'translateX(-12px)',
+                        }}
+                        transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+                      >
+                        Explore Feature
+                      </Button>
+                    </VStack>
+                  </Flex>
+                </Grid>
+              </Box>
+            </FallInPlace>
+          ))}
+        </VStack>
+    </Box>
   )
 }
 
-export default Home
+export default function Home() {
+  return (
+    <Box>
+      <HeroSection />
+      <StatsSection />
+      <BenefitsSection />
+      <FeaturesShowcaseSection />
+      <StorySection1 />
+      <StorySection2 />
+      <StorySection3 />
+      <SolutionsShowcase />
+      <ImpactSection />
+      <InnovationSection />
+      <TestimonialsSection />
+      <TrustedBySection />
+      <CTASection />
+      <FaqSection />
+    </Box>
+  )
+}

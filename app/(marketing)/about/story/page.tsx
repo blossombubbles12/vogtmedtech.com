@@ -109,25 +109,25 @@ export default function OurStoryPage() {
       name: 'Dr. Michael Vogt',
       title: 'CEO & Founder',
       description: 'Visionary leader with 20+ years in medical technology innovation.',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&q=90',
     },
     {
       name: 'Sarah Chen',
       title: 'Chief Technology Officer',
       description: 'AI and robotics expert driving our technical excellence forward.',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=90',
     },
     {
       name: 'Dr. James Mitchell',
       title: 'Chief Medical Officer',
       description: 'Renowned surgeon ensuring clinical relevance in every innovation.',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&q=90',
     },
     {
       name: 'Emily Rodriguez',
       title: 'VP of Research & Development',
       description: 'Leading our team of 200+ engineers and researchers globally.',
-      image: '/static/images/avatar.jpg',
+      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&q=90',
     },
   ]
 
@@ -198,8 +198,8 @@ export default function OurStoryPage() {
                   borderColor={cardBorder}
                 >
                   <Image
-                    src="/static/images/avatar.jpg"
-                    alt="Innovation Lab"
+                    src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=800&h=600&fit=crop&q=90"
+                    alt="Innovation Lab - Team collaborating on medical technology"
                     width="100%"
                     height="auto"
                   />
