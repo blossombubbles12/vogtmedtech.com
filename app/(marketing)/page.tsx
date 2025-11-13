@@ -378,7 +378,7 @@ const StorySection1 = () => {
                 <Box
                   position="relative"
                   overflow="hidden"
-                  backgroundImage="url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=900&fit=crop&q=80')"
+                  backgroundImage="url('https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=1200&h=900&fit=crop&q=80')"
                   backgroundSize="cover"
                   backgroundPosition="center"
                 >
@@ -506,7 +506,7 @@ const StorySection2 = () => {
                 <Box
                   position="relative"
                   overflow="hidden"
-                  backgroundImage="url('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&h=900&fit=crop&q=80')"
+                  backgroundImage="url('https://images.unsplash.com/photo-1551076805-e1869033e561?w=1200&h=900&fit=crop&q=80')"
                   backgroundSize="cover"
                   backgroundPosition="center"
                 >
@@ -849,7 +849,7 @@ const StorySection3 = () => {
                 <Box
                   position="relative"
                   overflow="hidden"
-                  backgroundImage="url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1200&h=900&fit=crop&q=80')"
+                  backgroundImage="url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=900&fit=crop&q=80')"
                   backgroundSize="cover"
                   backgroundPosition="center"
                 >
@@ -1616,7 +1616,7 @@ const FeaturesShowcaseSection = () => {
       title: 'Innovation in Action',
       description:
         'Witness surgical precision redefined through AI-powered robotics that combine machine learning with human expertise, delivering unprecedented accuracy in complex medical procedures.',
-      image: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1600&h=1000&fit=crop&q=90',
+      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1600&h=1000&fit=crop&q=90',
       stats: { value: '99.8%', label: 'Precision Rate' },
     },
     {
@@ -1625,7 +1625,7 @@ const FeaturesShowcaseSection = () => {
       title: 'Technology That Transforms Care',
       description:
         'Experience the future of diagnostics with our AI-powered imaging systems that detect conditions 10x faster than traditional methods, revolutionizing patient outcomes worldwide.',
-      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&h=1000&fit=crop&q=90',
+      image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=1600&h=1000&fit=crop&q=90',
       stats: { value: '10x', label: 'Faster Diagnosis' },
     },
     {
@@ -1634,7 +1634,7 @@ const FeaturesShowcaseSection = () => {
       title: 'Data-Driven Patient Outcomes',
       description:
         'Harness the power of predictive analytics and real-time monitoring to anticipate patient needs, optimize treatments, and reduce hospital readmissions by 58%.',
-      image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1600&h=1000&fit=crop&q=90',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&h=1000&fit=crop&q=90',
       stats: { value: '58%', label: 'Reduced Readmissions' },
     },
   ]
@@ -1895,7 +1895,7 @@ export default function Home() {
       date: '2025-11-10',
       author: 'Dr. Sarah Chen',
       category: 'Artificial Intelligence',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop&q=90',
+      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=630&fit=crop&q=90',
     },
     {
       slug: 'future-of-robotic-surgery',
@@ -1904,7 +1904,7 @@ export default function Home() {
       date: '2025-11-05',
       author: 'Dr. Michael Rodriguez',
       category: 'Robotics',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=630&fit=crop&q=90',
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=630&fit=crop&q=90',
     },
     {
       slug: 'remote-patient-monitoring-revolution',
