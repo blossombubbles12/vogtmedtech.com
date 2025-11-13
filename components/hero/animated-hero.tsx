@@ -3,6 +3,7 @@
 import React, { useRef, useEffect, useCallback } from 'react'
 import { Button, Box, Heading, Text, VStack, HStack, Stack, Badge } from '@chakra-ui/react'
 import { FiArrowRight, FiActivity } from 'react-icons/fi'
+import { DynamicText } from './dynamic-text'
 
 // Easing functions
 const easingUtils = {
@@ -564,7 +565,7 @@ const AnimatedHero: React.FC = () => {
             </HStack>
           </Badge>
 
-          {/* Main Heading */}
+          {/* Main Heading with Dynamic Text */}
           <Heading
             as="h1"
             fontSize={{ base: '3xl', sm: '4xl', md: '6xl', lg: '7xl' }}
@@ -574,9 +575,20 @@ const AnimatedHero: React.FC = () => {
             lineHeight="1.1"
             px={{ base: 2, md: 0 }}
           >
-            Advanced Medical
+            <DynamicText
+              words={[
+                'Pioneering Innovation in',
+                'Advancing Precision in',
+                'Transforming Technology in',
+                'Elevating Patient Care with',
+                'Building the Future of',
+              ]}
+              fontSize={{ base: '3xl', sm: '4xl', md: '6xl', lg: '7xl' }}
+              color="white"
+              fontWeight="bold"
+            />
             <br />
-            Technology Solutions
+            Medical Technology
           </Heading>
 
           {/* Subtitle */}
