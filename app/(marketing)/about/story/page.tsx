@@ -40,39 +40,39 @@ export default function OurStoryPage() {
 
   const milestones = [
     {
-      year: '2010',
+      year: '1995',
       title: 'Foundation',
-      description: 'Vogt MedTech founded with a vision to revolutionize medical diagnostics.',
+      description: 'Vogt MedTech founded with a mission to unite advanced engineering with compassionate care.',
       icon: FiZap,
     },
     {
-      year: '2013',
-      title: 'First Breakthrough',
-      description: 'Launch of our AI-powered diagnostic imaging platform, transforming radiology.',
+      year: '2001',
+      title: 'First Device Launch',
+      description: 'Release of our first diagnostic hardware platform adopted by regional hospitals.',
       icon: FiTrendingUp,
     },
     {
-      year: '2016',
-      title: 'Global Expansion',
-      description: 'Expanded operations to 15 countries, serving 200+ healthcare institutions.',
+      year: '2008',
+      title: 'International Expansion',
+      description: 'Entered European and Asia-Pacific markets; 75+ institutions using our solutions.',
       icon: FiGlobe,
     },
     {
-      year: '2019',
-      title: 'FDA Approval',
-      description: 'Received FDA approval for our revolutionary surgical robotics system.',
+      year: '2015',
+      title: 'AI Breakthrough',
+      description: 'Introduced multi-modal AI imaging engine improving early detection accuracy.',
       icon: FiAward,
     },
     {
-      year: '2022',
-      title: 'Innovation Milestone',
-      description: 'Filed our 150th patent, leading the industry in medical technology innovation.',
+      year: '2020',
+      title: 'Robotics Milestone',
+      description: 'Scaled next-gen surgical robotics program with FDA clearances across key indications.',
       icon: FiLayers,
     },
     {
       year: '2025',
-      title: 'Global Leader',
-      description: 'Serving 500+ healthcare institutions across 45 countries, impacting 2M+ lives.',
+      title: '30 Years of Impact',
+      description: 'Serving 500+ institutions in 45 countries, 2M+ patient lives impacted annually.',
       icon: FiUsers,
     },
   ]
@@ -219,7 +219,7 @@ export default function OurStoryPage() {
               fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
               fontWeight="800"
             >
-              Our Journey
+              Our Journey: 30+ Years of Innovation
             </Heading>
             <Text
               fontSize={{ base: 'lg', md: 'xl' }}
@@ -227,7 +227,7 @@ export default function OurStoryPage() {
               _dark={{ color: 'gray.400' }}
               maxW="3xl"
             >
-              Milestones that shaped our path to becoming a global leader in medical technology.
+              Milestones over three decades that shaped our path from a pioneering lab to a global leader in medical technology.
             </Text>
           </VStack>
 
