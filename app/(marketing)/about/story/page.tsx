@@ -173,8 +173,8 @@ export default function OurStoryPage() {
                   mb={6}
                   lineHeight="tall"
                 >
-                  Founded in 2010, Vogt MedTech began with a simple yet profound mission: to bridge
-                  the gap between cutting-edge technology and compassionate patient care.
+                  With over 30 years in business, Vogt MedTech began with a simple yet profound mission: to bridge
+                  the gap between cutting-edge technology and compassionate patient care. Since our founding in 1995, we have continuously advanced the field of medical technology.
                 </Text>
                 <Text
                   fontSize={{ base: 'lg', md: 'xl' }}
