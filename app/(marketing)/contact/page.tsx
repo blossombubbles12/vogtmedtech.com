@@ -110,7 +110,7 @@ export default function ContactPage() {
     cityState: '800 W. Fulton Market, Chicago, IL',
     country: 'United States',
     phone: '+1 815-427-1277',
-    email: '',
+    email: 'info@vogtmedtech.com',
   },
   {
     city: 'Chicago',
@@ -119,7 +119,7 @@ export default function ContactPage() {
     cityState: 'Corner of Lake & Canal Street, Chicago, IL',
     country: 'United States',
     phone: '+1 815-427-1277',
-    email: '',
+    email: 'contact@vogtmedtech.com',
   },
   {
     city: 'Tampa',
