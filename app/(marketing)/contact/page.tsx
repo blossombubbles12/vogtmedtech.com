@@ -100,8 +100,8 @@ export default function ContactPage() {
     address: 'TEF4 at UBC Tech District',
     cityState: '2425 Health Science Mall, Vancouver, BC',
     country: 'Canada',
-    phone: '+1 (604) 555-0400',
-    email: 'vancouver@vogtmedtech.com',
+    phone: '+1 604-901-9169',
+    email: '',
   },
   {
     city: 'Chicago',
@@ -109,8 +109,8 @@ export default function ContactPage() {
     address: '800 Fulton Market',
     cityState: '800 W. Fulton Market, Chicago, IL',
     country: 'United States',
-    phone: '+1 (312) 555-0500',
-    email: 'chicago@vogtmedtech.com',
+    phone: '+1 815-427-1277',
+    email: '',
   },
   {
     city: 'Chicago',
@@ -118,8 +118,8 @@ export default function ContactPage() {
     address: 'River Point',
     cityState: 'Corner of Lake & Canal Street, Chicago, IL',
     country: 'United States',
-    phone: '+1 (312) 555-0550',
-    email: 'chicagoriverpoint@vogtmedtech.com',
+    phone: '+1 815-427-1277',
+    email: '',
   },
   {
     city: 'Tampa',
@@ -127,8 +127,8 @@ export default function ContactPage() {
     address: 'Rivergate Tower',
     cityState: 'Downtown Tampa, FL',
     country: 'United States',
-    phone: '+1 (813) 555-0600',
-    email: 'tampa@vogtmedtech.com',
+    phone: '+1 (813) 736-1790',
+    email: 'contact@vogtmedtech.com',
     isHQ: true,
   },
   {
@@ -138,9 +138,10 @@ export default function ContactPage() {
     cityState: '20 Toronto Street, Toronto, ON M5C 2C5',
     country: 'Canada',
     phone: '+1 (416) 555-0700',
-    email: 'toronto@vogtmedtech.com',
+    email: '',
   },
   ]
+
 
   const socialLinks = [
     { icon: FaLinkedin, label: 'LinkedIn', href: 'https://linkedin.com/company/vogtmedtech', color: '#0A66C2' },
