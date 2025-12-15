@@ -109,7 +109,7 @@ export default function OurStoryPage() {
       name: 'Brian Vogt',
       title: 'CEO and Co-Founder',
       description: 'Visionary leader with 20+ years in medical technology innovation.',
-      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=400&fit=crop&q=90',
+      image: '/static/images/vogt.jpeg',
     },
     {
       name: 'Sarah Chen',

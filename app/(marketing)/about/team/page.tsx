@@ -45,7 +45,7 @@ export default function TeamPage() {
     {
       name: 'Brian Vogt',
       title: 'CEO and Co-Founder',
-      image: '/images/vogt.jpeg',
+      image: '/static/images/vogt.jpeg',
       bio: 'Visionary leader with 25+ years pioneering medical device innovation. Founded Vogt MedTech with a mission to democratize access to cutting-edge healthcare technology worldwide.',
       education: 'Ph.D. Biomedical Engineering, MIT | MBA, Stanford GSB',
       specialization: 'Medical Devices, Healthcare Innovation, Strategic Leadership',
