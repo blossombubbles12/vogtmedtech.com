@@ -592,7 +592,7 @@ export default function ContactPage() {
                   Global Offices
                 </Heading>
                 <Text fontSize="lg" color="gray.600" _dark={{ color: 'gray.400' }}>
-                  With 12 offices worldwide, we're always close to our customers
+                  With offices worldwide, we're always close to our customers
                 </Text>
               </Box>
             </FallInPlace>

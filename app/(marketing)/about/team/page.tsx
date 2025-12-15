@@ -43,9 +43,9 @@ export default function TeamPage() {
 
   const executiveTeam = [
     {
-      name: 'Dr. Michael Vogt',
-      title: 'Chief Executive Officer & Founder',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&q=80',
+      name: 'Brian Vogt',
+      title: 'CEO and Co-Founder',
+      image: '/images/vogt.jpeg',
       bio: 'Visionary leader with 25+ years pioneering medical device innovation. Founded Vogt MedTech with a mission to democratize access to cutting-edge healthcare technology worldwide.',
       education: 'Ph.D. Biomedical Engineering, MIT | MBA, Stanford GSB',
       specialization: 'Medical Devices, Healthcare Innovation, Strategic Leadership',

@@ -106,10 +106,10 @@ export default function OurStoryPage() {
 
   const team = [
     {
-      name: 'Dr. Michael Vogt',
-      title: 'CEO & Founder',
+      name: 'Brian Vogt',
+      title: 'CEO and Co-Founder',
       description: 'Visionary leader with 20+ years in medical technology innovation.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&q=90',
+      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=400&fit=crop&q=90',
     },
     {
       name: 'Sarah Chen',
@@ -198,7 +198,7 @@ export default function OurStoryPage() {
                   borderColor={cardBorder}
                 >
                   <Image
-                    src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=800&h=600&fit=crop&q=90"
+                    src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&h=600&fit=crop&q=90"
                     alt="Innovation Lab - Team collaborating on medical technology"
                     width="100%"
                     height="auto"

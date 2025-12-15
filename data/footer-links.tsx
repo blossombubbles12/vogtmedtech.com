@@ -60,7 +60,7 @@ export const footerSections: FooterSection[] = [
       { label: 'Schedule Demo', href: '/schedule-demo' },
       { label: 'Contact Sales', href: '/contact' },
       { label: 'support@vogtmedtech.com', href: 'mailto:support@vogtmedtech.com', isExternal: true },
-      { label: '+1 (555) 123-4567', href: 'tel:+15551234567', isExternal: true },
+
     ],
   },
 ]
@@ -85,6 +85,6 @@ export const socialLinks: SocialLink[] = [
 
 export const contactInfo = {
   email: 'support@vogtmedtech.com',
-  phone: '+1 (555) 123-4567',
-  address: '100 Innovation Drive, Boston, MA 02110',
+  phone: '',
+  address: '',
 }
