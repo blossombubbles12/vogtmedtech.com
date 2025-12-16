@@ -1580,7 +1580,7 @@ const TestimonialsSection = () => {
         {columns.map((column, i) => (
           <Stack key={i} spacing="8">
             {column.map((t, i) => (
-              <Testimonial key={i} {...t} />
+              <Testimonial key={i}>{t.children}</Testimonial>
             ))}
           </Stack>
         ))}
