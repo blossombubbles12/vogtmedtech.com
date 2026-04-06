@@ -78,40 +78,6 @@ export default function TeamPage() {
         email: 'j.mitchell@vogtmedtech.com',
       },
     },
-    {
-      name: 'David Park',
-      title: 'Chief Financial Officer',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&q=80',
-      bio: 'Strategic financial leader with deep expertise in healthcare economics and high-growth medical technology companies. Driving sustainable growth while maintaining our mission-first approach.',
-      education: 'MBA, Harvard Business School | B.A. Economics, Yale University',
-      specialization: 'Healthcare Finance, M&A Strategy, Investor Relations',
-      achievements: [
-        'Led $250M Series C funding round',
-        'Former VP at Goldman Sachs Healthcare',
-        'Board member of 3 medtech startups',
-      ],
-      social: {
-        linkedin: '#',
-        email: 'd.park@vogtmedtech.com',
-      },
-    },
-    {
-      name: 'Dr. Aisha Patel',
-      title: 'Chief Compliance & Regulatory Officer',
-      image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop&q=80',
-      bio: 'Regulatory expert ensuring global compliance across 45 countries. Champion of ethical innovation and patient safety, navigating complex international medical device regulations.',
-      education: 'J.D., Columbia Law School | Ph.D. Regulatory Science, USC',
-      specialization: 'FDA/EMA Regulations, Quality Systems, Ethics & Compliance',
-      achievements: [
-        'Successfully navigated 20+ international approvals',
-        'Former FDA Medical Device Reviewer',
-        'Expert testimony to Congressional committees',
-      ],
-      social: {
-        linkedin: '#',
-        email: 'a.patel@vogtmedtech.com',
-      },
-    },
   ]
 
 
@@ -177,8 +143,8 @@ export default function TeamPage() {
                 color={mutedColor}
                 lineHeight="tall"
               >
-                Our leadership team combines world-class expertise in medicine, engineering, 
-                and business to drive innovation that transforms patient care globally. 
+                Our leadership team combines world-class expertise in medicine, engineering,
+                and business to drive innovation that transforms patient care globally.
                 Together, we're building the future of medical technology.
               </Text>
             </FallInPlace>
@@ -231,7 +197,7 @@ export default function TeamPage() {
               Executive Leadership
             </Heading>
             <Text fontSize={{ base: 'lg', md: 'xl' }} color={mutedColor} maxW="3xl">
-              Visionary leaders with proven track records in medical innovation, 
+              Visionary leaders with proven track records in medical innovation,
               clinical excellence, and strategic growth.
             </Text>
           </VStack>
@@ -449,7 +415,7 @@ export default function TeamPage() {
                 color="whiteAlpha.900"
                 maxW="2xl"
               >
-                We're always looking for exceptional talent to join our team. 
+                We're always looking for exceptional talent to join our team.
                 Help us pioneer the future of medical technology.
               </Text>
               <Flex gap={4} flexWrap="wrap" justify="center" pt={4}>
