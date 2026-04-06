@@ -60,24 +60,7 @@ export default function TeamPage() {
         email: 'm.vogt@vogtmedtech.com',
       },
     },
-    {
-      name: 'Dr. Sarah Chen',
-      title: 'Chief Technology Officer',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&q=80',
-      bio: 'AI and robotics pioneer transforming surgical precision. Leading our R&D division with breakthrough innovations in machine learning-powered diagnostics and autonomous surgical systems.',
-      education: 'Ph.D. Artificial Intelligence, Carnegie Mellon | B.S. Robotics, UC Berkeley',
-      specialization: 'AI/ML, Surgical Robotics, Computer Vision',
-      achievements: [
-        'Developed award-winning AI diagnostic platform',
-        '80+ peer-reviewed publications',
-        'Former lead engineer at Boston Dynamics',
-      ],
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        email: 's.chen@vogtmedtech.com',
-      },
-    },
+
     {
       name: 'Dr. James Mitchell',
       title: 'Chief Medical Officer',
@@ -130,55 +113,10 @@ export default function TeamPage() {
         email: 'd.park@vogtmedtech.com',
       },
     },
-    {
-      name: 'Dr. Aisha Patel',
-      title: 'Chief Compliance & Regulatory Officer',
-      image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop&q=80',
-      bio: 'Regulatory expert ensuring global compliance across 45 countries. Champion of ethical innovation and patient safety, navigating complex international medical device regulations.',
-      education: 'J.D., Columbia Law School | Ph.D. Regulatory Science, USC',
-      specialization: 'FDA/EMA Regulations, Quality Systems, Ethics & Compliance',
-      achievements: [
-        'Successfully navigated 20+ international approvals',
-        'Former FDA Medical Device Reviewer',
-        'Expert testimony to Congressional committees',
-      ],
-      social: {
-        linkedin: '#',
-        email: 'a.patel@vogtmedtech.com',
-      },
-    },
+
   ]
 
-  const advisoryBoard = [
-    {
-      name: 'Prof. Robert Chen',
-      title: 'Scientific Advisor',
-      affiliation: 'MIT Media Lab',
-      expertise: 'Biomedical Engineering',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80',
-    },
-    {
-      name: 'Dr. Lisa Thompson',
-      title: 'Clinical Advisor',
-      affiliation: 'Cleveland Clinic',
-      expertise: 'Cardiothoracic Surgery',
-      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=400&fit=crop&q=80',
-    },
-    {
-      name: 'Dr. Ahmed Hassan',
-      title: 'Strategic Advisor',
-      affiliation: 'WHO Health Systems',
-      expertise: 'Global Health Policy',
-      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&q=80',
-    },
-    {
-      name: 'Jennifer Wu',
-      title: 'Innovation Advisor',
-      affiliation: 'Y Combinator',
-      expertise: 'Healthcare Startups',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&q=80',
-    },
-  ]
+
 
   const stats = [
     {
@@ -484,75 +422,7 @@ export default function TeamPage() {
         </Container>
       </Section>
 
-      {/* Advisory Board */}
-      <Section py={20}>
-        <Container maxW="container.xl">
-          <VStack spacing={4} mb={12} textAlign="center">
-            <Heading
-              as="h2"
-              fontSize={{ base: '3xl', md: '4xl' }}
-              fontWeight="800"
-            >
-              Advisory Board
-            </Heading>
-            <Text fontSize={{ base: 'lg', md: 'xl' }} color={mutedColor} maxW="3xl">
-              Distinguished experts from leading institutions guiding our strategic direction.
-            </Text>
-          </VStack>
 
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={6}>
-            {advisoryBoard.map((advisor, index) => (
-              <FallInPlace key={advisor.name} delay={0.1 * index}>
-                <Box
-                  bg={cardBg}
-                  border="1px"
-                  borderColor={cardBorder}
-                  borderRadius="xl"
-                  p={6}
-                  textAlign="center"
-                  _hover={{
-                    shadow: 'xl',
-                    transform: 'translateY(-4px)',
-                    borderColor: 'brand.500',
-                  }}
-                  transition="all 0.3s"
-                >
-                  <Flex
-                    align="center"
-                    justify="center"
-                    w={16}
-                    h={16}
-                    borderRadius="full"
-                    bg={useColorModeValue('gray.100', 'gray.700')}
-                    mx="auto"
-                    mb={4}
-                  >
-                    <Image
-                      src={advisor.image}
-                      alt={advisor.name}
-                      borderRadius="full"
-                      boxSize={16}
-                      objectFit="cover"
-                    />
-                  </Flex>
-                  <Heading as="h3" size="sm" mb={1}>
-                    {advisor.name}
-                  </Heading>
-                  <Text fontSize="xs" color="brand.500" fontWeight="600" mb={2}>
-                    {advisor.title}
-                  </Text>
-                  <Badge colorScheme="purple" fontSize="xs" mb={2}>
-                    {advisor.affiliation}
-                  </Badge>
-                  <Text fontSize="xs" color={mutedColor}>
-                    {advisor.expertise}
-                  </Text>
-                </Box>
-              </FallInPlace>
-            ))}
-          </SimpleGrid>
-        </Container>
-      </Section>
 
       {/* Join Our Team CTA */}
       <Section bg={featureBg} py={20}>
