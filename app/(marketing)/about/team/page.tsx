@@ -79,24 +79,6 @@ export default function TeamPage() {
       },
     },
     {
-      name: 'Emily Rodriguez',
-      title: 'VP of Research & Development',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=80',
-      bio: 'Leading a global team of 200+ engineers and researchers driving breakthrough innovations. Expert in translating scientific discoveries into market-ready medical solutions.',
-      education: 'Ph.D. Mechanical Engineering, Stanford | B.S. Bioengineering, Georgia Tech',
-      specialization: 'Product Development, Materials Science, Regulatory Strategy',
-      achievements: [
-        'Led development of 12 FDA-cleared devices',
-        '50+ patents in medical device technology',
-        'Winner of Edison Award for Innovation',
-      ],
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        email: 'e.rodriguez@vogtmedtech.com',
-      },
-    },
-    {
       name: 'David Park',
       title: 'Chief Financial Officer',
       image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&q=80',
@@ -113,7 +95,23 @@ export default function TeamPage() {
         email: 'd.park@vogtmedtech.com',
       },
     },
-
+    {
+      name: 'Dr. Aisha Patel',
+      title: 'Chief Compliance & Regulatory Officer',
+      image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop&q=80',
+      bio: 'Regulatory expert ensuring global compliance across 45 countries. Champion of ethical innovation and patient safety, navigating complex international medical device regulations.',
+      education: 'J.D., Columbia Law School | Ph.D. Regulatory Science, USC',
+      specialization: 'FDA/EMA Regulations, Quality Systems, Ethics & Compliance',
+      achievements: [
+        'Successfully navigated 20+ international approvals',
+        'Former FDA Medical Device Reviewer',
+        'Expert testimony to Congressional committees',
+      ],
+      social: {
+        linkedin: '#',
+        email: 'a.patel@vogtmedtech.com',
+      },
+    },
   ]
 
 
