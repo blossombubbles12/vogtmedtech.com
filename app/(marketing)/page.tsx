@@ -99,57 +99,78 @@ const StatsSection = () => {
   ]
 
   return (
-    <Section py={20} bg="gray.50" _dark={{ bg: 'gray.900' }}>
+    <Section py={24} bg="gray.50" _dark={{ bg: 'gray.900' }}>
       <Container maxW="container.2xl">
         <FallInPlace delay={0.1}>
-          <VStack spacing={4} textAlign="center" mb={16}>
-            <Badge colorScheme="brand" fontSize="sm" px={3} py={1} borderRadius="full">
+          <VStack spacing={6} textAlign="center" mb={20}>
+            <Badge colorScheme="brand" fontSize="sm" px={4} py={2} borderRadius="full" variant="subtle" textTransform="uppercase" letterSpacing="widest">
               Global Impact
             </Badge>
-            <Heading size="2xl" maxW="3xl">
+            <Heading size="3xl" maxW="3xl" fontWeight="800" letterSpacing="tight">
               Transforming Healthcare at Scale
             </Heading>
-            <Text fontSize="xl" color="gray.600" _dark={{ color: 'gray.400' }} maxW="2xl">
+            <Text fontSize="xl" color="gray.600" _dark={{ color: 'gray.400' }} maxW="3xl" lineHeight="tall">
               Our innovative solutions are deployed across leading healthcare institutions worldwide,
               driving measurable improvements in patient outcomes and operational efficiency.
             </Text>
           </VStack>
         </FallInPlace>
 
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={8}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
           {stats.map((stat, index) => (
             <FallInPlace key={index} delay={0.2 + index * 0.1}>
               <Box
-                p={8}
+                p={10}
                 bg={statBg}
-                borderRadius="2xl"
+                borderRadius="3xl"
                 border="1px"
-                borderColor="gray.200"
-                _dark={{ borderColor: 'gray.700' }}
-                transition="all 0.3s"
+                borderColor="gray.100"
+                _dark={{ borderColor: 'whiteAlpha.100' }}
+                transition="all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+                position="relative"
+                overflow="hidden"
                 _hover={{
-                  transform: 'translateY(-8px)',
-                  shadow: '2xl',
-                  borderColor: `${stat.color}.500`,
+                  transform: 'translateY(-12px)',
+                  shadow: '3xl',
+                  borderColor: `${stat.color}.400`,
+                  _after: {
+                    transform: 'rotate(45deg) translate(0, 0)',
+                  },
+                }}
+                _after={{
+                  content: '""',
+                  position: 'absolute',
+                  top: '-50%',
+                  right: '-50%',
+                  w: '100%',
+                  h: '200%',
+                  bgGradient: `linear(to-br, ${stat.color}.50, transparent)`,
+                  _dark: { bgGradient: `linear(to-br, ${stat.color}.900, transparent)` },
+                  transform: 'rotate(45deg) translate(100%, 0)',
+                  transition: 'transform 0.6s ease',
+                  opacity: 0.3,
+                  pointerEvents: 'none',
                 }}
                 textAlign="center"
               >
                 <Icon
                   as={stat.icon}
-                  boxSize={12}
+                  boxSize={14}
                   color={`${stat.color}.500`}
-                  mb={4}
+                  mb={6}
+                  filter={`drop-shadow(0 0 8px ${stat.color})`}
                 />
                 <Text
-                  fontSize="4xl"
-                  fontWeight="bold"
-                  bgGradient={`linear(to-r, ${stat.color}.500, ${stat.color}.600)`}
+                  fontSize="5xl"
+                  fontWeight="900"
+                  bgGradient={`linear(to-br, ${stat.color}.400, ${stat.color}.600)`}
                   bgClip="text"
-                  mb={2}
+                  mb={3}
+                  letterSpacing="tighter"
                 >
                   {stat.value}
                 </Text>
-                <Text fontSize="md" color="gray.600" _dark={{ color: 'gray.400' }} fontWeight="600">
+                <Text fontSize="lg" color="gray.600" _dark={{ color: 'gray.400' }} fontWeight="700" letterSpacing="wide" textTransform="uppercase">
                   {stat.label}
                 </Text>
               </Box>
@@ -195,61 +216,80 @@ const BenefitsSection = () => {
   ]
 
   return (
-    <Section py={{ base: 16, md: 20 }}>
+    <Section py={{ base: 20, md: 32 }} position="relative" overflow="hidden">
+      {/* Abstract background element */}
+      <Box
+        position="absolute"
+        top="10%"
+        right="-5%"
+        w="40%"
+        h="40%"
+        bgGradient="radial(accent.500 0%, transparent 70%)"
+        opacity="0.05"
+        zIndex="-1"
+        filter="blur(80px)"
+      />
+      
       <Container maxW="container.2xl">
         <FallInPlace delay={0.1}>
-          <VStack spacing={4} textAlign="center" mb={{ base: 12, md: 16 }}>
-            <Badge colorScheme="accent" fontSize="sm" px={3} py={1} borderRadius="full">
+          <VStack spacing={6} textAlign="center" mb={{ base: 16, md: 24 }}>
+            <Badge colorScheme="accent" fontSize="sm" px={4} py={2} borderRadius="full" variant="subtle" textTransform="uppercase" letterSpacing="widest">
               Why Choose VogtMedTech
             </Badge>
-            <Heading size={{ base: 'xl', md: '2xl' }} maxW="3xl">
+            <Heading size={{ base: '2xl', md: '3xl' }} maxW="4xl" fontWeight="800" letterSpacing="tight">
               Excellence in Every Innovation
             </Heading>
-            <Text fontSize={{ base: 'lg', md: 'xl' }} color="gray.600" _dark={{ color: 'gray.400' }} maxW="2xl">
+            <Text fontSize={{ base: 'lg', md: '2xl' }} color="gray.600" _dark={{ color: 'gray.400' }} maxW="3xl" lineHeight="tall">
               Combining cutting-edge technology with decades of medical expertise to deliver
               solutions that exceed the highest industry standards.
             </Text>
           </VStack>
         </FallInPlace>
 
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 6, md: 10 }}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 8, md: 12 }}>
           {benefits.map((benefit, index) => (
             <FallInPlace key={index} delay={0.2 + index * 0.1}>
                 <Box
-                  p={{ base: 6, md: 10 }}
-                  bg="white"
-                  borderRadius="2xl"
+                  p={{ base: 8, md: 12 }}
+                  bg="whiteAlpha.700"
+                  backdropFilter="blur(10px)"
+                  borderRadius="3xl"
                   border="1px"
-                  borderColor="gray.200"
-                  transition="all 0.3s"
+                  borderColor="whiteAlpha.200"
+                  boxShadow="xl"
+                  transition="all 0.4s cubic-bezier(0.4, 0, 0.2, 1)"
                   h="full"
+                  position="relative"
+                  overflow="hidden"
                   _dark={{
                     bg: 'gray.800',
-                    borderColor: 'gray.700',
+                    borderColor: 'whiteAlpha.100',
                   }}
                   _hover={{
-          
-                    transform: 'translateY(-4px)',
-                    shadow: '2xl',
-                    borderColor: `${benefit.color}.500`,
+                    transform: 'translateY(-10px)',
+                    shadow: '3xl',
+                    borderColor: `${benefit.color}.400`,
+                    bg: 'white',
+                    _dark: { bg: 'gray.700' }
                   }}
                 >
-                  <HStack spacing={{ base: 3, md: 4 }} align="start" flexDirection={{ base: 'column', sm: 'row' }}>
+                  <HStack spacing={{ base: 4, md: 8 }} align="start" flexDirection={{ base: 'column', sm: 'row' }}>
                     <Box
-                      p={{ base: 3, md: 4 }}
+                      p={{ base: 4, md: 5 }}
                       bg={`${benefit.color}.50`}
-                      borderRadius="xl"
-                      _dark={{ bg: `${benefit.color}.900` }}
+                      borderRadius="2xl"
+                      boxShadow={`0 8px 16px -4px ${benefit.color}.200`}
+                      _dark={{ bg: `${benefit.color}.900`, boxShadow: 'none' }}
                       alignSelf={{ base: 'center', sm: 'flex-start' }}
                     >
-                      <Icon as={benefit.icon} boxSize={{ base: 6, md: 8 }} color={`${benefit.color}.500`} />
+                      <Icon as={benefit.icon} boxSize={{ base: 8, md: 10 }} color={`${benefit.color}.500`} />
                     </Box>
-                    <VStack align={{ base: 'center', sm: 'start' }} spacing={3} flex={1} textAlign={{ base: 'center', sm: 'left' }}>
-                      <Heading size={{ base: 'sm', md: 'md' }}>{benefit.title}</Heading>
+                    <VStack align={{ base: 'center', sm: 'start' }} spacing={4} flex={1} textAlign={{ base: 'center', sm: 'left' }}>
+                      <Heading size={{ base: 'md', md: 'lg' }} letterSpacing="tight">{benefit.title}</Heading>
                       <Text
                         color="gray.600"
                         lineHeight="tall"
-                        fontSize={{ base: 'sm', md: 'md' }}
+                        fontSize={{ base: 'md', md: 'lg' }}
                         _dark={{ color: 'gray.400' }}
                       >
                         {benefit.description}
@@ -1918,15 +1958,13 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <BenefitsSection />
-      <FeaturesShowcaseSection />
       <StorySection1 />
       <StorySection2 />
       <StorySection3 />
-      <SolutionsShowcase />
+      <TrustedBySection />
       <ImpactSection />
       <InnovationSection />
       <TestimonialsSection />
-      <TrustedBySection />
       <LatestBlogClient posts={latestPosts} />
       <CTASection />
       <FaqSection />
