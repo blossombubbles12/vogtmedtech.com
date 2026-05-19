@@ -87,7 +87,7 @@ export default function ContactPage() {
       title: 'Careers',
       description: 'Join our team of innovators and experts',
       email: 'careers@vogtmedtech.com',
-      phone: '+1 604-901-9169',
+      phone: '+1 (408) 721-6740',
       hours: 'Mon-Fri: 9AM-5PM EST',
       color: 'pink',
     },
@@ -95,12 +95,12 @@ export default function ContactPage() {
 
   const offices = [
     {
-    city: 'Vancouver',
+    city: 'Silicon Valley',
     region: 'West Coast Office',
-    address: 'TEF4 at UBC Tech District',
-    cityState: '2425 Health Science Mall, Vancouver, BC',
-    country: 'Canada',
-    phone: '+1 604-901-9169',
+    address: 'Stanford Research Park',
+    cityState: 'Stanford, CA',
+    country: 'United States',
+    phone: '+1 (408) 721-6740',
     email: 'contact@vogtmedtech.com',
   },
 
@@ -119,7 +119,7 @@ export default function ContactPage() {
     address: 'Rivergate Tower',
     cityState: 'Downtown Tampa, FL',
     country: 'United States',
-    phone: '+1 (813) 736-1790',
+    phone: '+1 (386) 200-2864',
     email: 'contact@vogtmedtech.com',
     isHQ: true,
   },

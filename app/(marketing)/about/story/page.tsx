@@ -106,10 +106,10 @@ export default function OurStoryPage() {
 
   const team = [
     {
-      name: 'Brian Vogt',
+      name: 'Desmond Vogt',
       title: 'CEO and Co-Founder',
       description: 'Visionary leader with 20+ years in medical technology innovation.',
-      image: '/static/images/vogt.jpeg',
+      image: '/static/images/desmond.png',
     },
     {
       name: 'Dr. James Mitchell',

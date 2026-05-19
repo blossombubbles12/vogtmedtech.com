@@ -43,9 +43,9 @@ export default function TeamPage() {
 
   const executiveTeam = [
     {
-      name: 'Brian Vogt',
+      name: 'Desmond Vogt',
       title: 'CEO and Co-Founder',
-      image: '/static/images/vogt.jpeg',
+      image: '/static/images/desmond.png',
       bio: 'Visionary leader with 25+ years pioneering medical device innovation. Founded Vogt MedTech with a mission to democratize access to cutting-edge healthcare technology worldwide.',
       education: 'Ph.D. Biomedical Engineering, MIT | MBA, Stanford GSB',
       specialization: 'Medical Devices, Healthcare Innovation, Strategic Leadership',
@@ -57,7 +57,7 @@ export default function TeamPage() {
       social: {
         linkedin: '#',
         twitter: '#',
-        email: 'm.vogt@vogtmedtech.com',
+        email: 'd.vogt@vogtmedtech.com',
       },
     },
 
